@@ -1,0 +1,9 @@
+Main {
+main() : int {
+int x
+int y
+x = 10 - 6
+y = x
+return x + y
+}
+}

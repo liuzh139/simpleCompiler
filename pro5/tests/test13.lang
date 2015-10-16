@@ -1,0 +1,15 @@
+Main {
+main() : int {
+int x
+int y
+int z
+int p
+int q
+x = 7
+y = 4
+z = 4
+p = 3 / 5
+q = z + 6
+return x + y + z + p + q
+}
+}

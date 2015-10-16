@@ -1,0 +1,15 @@
+Main {
+main() : int {
+int x
+int y
+int z
+int p
+int q
+x = 9
+y = x
+z = x
+p = -z
+q = p
+return x + y + z + p + q
+}
+}

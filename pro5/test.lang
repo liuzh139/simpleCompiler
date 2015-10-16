@@ -1,0 +1,29 @@
+Main {
+int x
+int y
+int z
+
+func1(int a, int b, int c) : bool {
+int d1
+int d2
+int d3
+return false
+}
+
+func2() : none {
+bool h
+bool i
+bool j
+}
+}
+
+Objects : Main {
+ClassA a
+ClassB b
+
+funco(ClassC c, Objects obj) : ClassD {
+ClassE e
+int f
+return d
+}
+}

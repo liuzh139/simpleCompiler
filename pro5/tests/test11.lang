@@ -1,0 +1,13 @@
+Main {
+main() : int {
+int x
+int y
+int z
+int p
+x = 8
+y = x
+z = (y)
+p = 9
+return x + y + z + p
+}
+}
