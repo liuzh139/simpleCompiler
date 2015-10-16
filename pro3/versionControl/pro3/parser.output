@@ -1,0 +1,2012 @@
+Terminals which are not used
+
+   ABSOLUTEVALUE
+
+
+State 5 conflicts: 1 shift/reduce, 1 reduce/reduce
+State 13 conflicts: 1 reduce/reduce
+State 16 conflicts: 1 shift/reduce, 1 reduce/reduce
+State 21 conflicts: 1 shift/reduce
+State 37 conflicts: 8 shift/reduce, 1 reduce/reduce
+State 44 conflicts: 8 shift/reduce, 1 reduce/reduce
+State 45 conflicts: 8 shift/reduce, 1 reduce/reduce
+State 46 conflicts: 4 shift/reduce
+State 47 conflicts: 4 shift/reduce
+State 48 conflicts: 4 shift/reduce
+State 49 conflicts: 4 shift/reduce
+State 52 conflicts: 4 shift/reduce
+
+
+Grammar
+
+    0 $accept: Start $end
+
+    1 Start: Class
+
+    2 Class: IDENTIFIER OPENBRACE ClassBody CLOSEBRACE Class
+    3      | IDENTIFIER COLON IDENTIFIER OPENBRACE ClassBody CLOSEBRACE Class
+    4      | /* empty */
+
+    5 ClassBody: Members Methods
+    6          | Members
+    7          | Methods
+
+    8 Members: Type IDENTIFIER Members
+    9        | /* empty */
+
+   10 Methods: IDENTIFIER OPENPAREN Arguments CLOSEPAREN COLON Type OPENBRACE Body CLOSEBRACE Methods
+   11        | /* empty */
+
+   12 Arguments: Type IDENTIFIER ArgumentsPrime
+   13          | /* empty */
+
+   14 ArgumentsPrime: COMMA Arguments
+   15               | /* empty */
+
+   16 Body: Declarations Body
+   17     | Statements Body
+   18     | returnStatement
+   19     | /* empty */
+
+   20 Declarations: Type IDENTIFIER DeclarationsPrime
+
+   21 DeclarationsPrime: COMMA IDENTIFIER DeclarationsPrime
+   22                  | /* empty */
+
+   23 Statements: Assignment Statements
+   24           | MethodCall Statements
+   25           | ifElse Statements
+   26           | forLoop Statements
+   27           | Print Statements
+   28           | /* empty */
+
+   29 Assignment: IDENTIFIER EQL Expression
+
+   30 ifElse: IF Expression OPENBRACE Statements CLOSEBRACE
+   31       | IF Expression OPENBRACE Statements CLOSEBRACE ELSE OPENBRACE Statements CLOSEBRACE
+
+   32 forLoop: FOR Assignment SIMICOLON Expression SIMICOLON Assignment OPENBRACE Statements CLOSEBRACE
+
+   33 Print: PRINT Expression
+
+   34 Type: INT
+   35     | BOOL
+   36     | NONE
+   37     | IDENTIFIER
+
+   38 returnStatement: RETURN Expression
+
+   39 Expression: Expression PLUS Expression
+   40           | Expression MINUS Expression
+   41           | Expression TIMES Expression
+   42           | Expression DIVIDE Expression
+   43           | Expression LESS Expression
+   44           | Expression LESSEQL Expression
+   45           | Expression IFEQL Expression
+   46           | Expression AND Expression
+   47           | Expression OR Expression
+   48           | NOT Expression
+   49           | MINUS Expression
+   50           | IDENTIFIER
+   51           | IDENTIFIER DOT IDENTIFIER
+   52           | MethodCall
+   53           | OPENPAREN Expression CLOSEPAREN
+   54           | INTEGER
+   55           | TRUE
+   56           | FALSE
+   57           | NEW IDENTIFIER
+   58           | NEW IDENTIFIER OPENPAREN Parameters CLOSEPAREN
+
+   59 MethodCall: IDENTIFIER OPENPAREN Parameters CLOSEPAREN
+   60           | IDENTIFIER DOT IDENTIFIER OPENPAREN Parameters CLOSEPAREN
+
+   61 Parameters: ParametersPrime
+   62           | /* empty */
+
+   63 ParametersPrime: ParametersPrime COMMA Expression
+   64                | Expression
+
+
+Terminals, with rules where they appear
+
+$end (0) 0
+error (256)
+OR (258) 47
+AND (259) 46
+LESS (260) 43
+LESSEQL (261) 44
+IFEQL (262) 45
+BOOL (263) 35
+INT (264) 34
+NONE (265) 36
+PRINT (266) 33
+RETURN (267) 38
+IF (268) 30 31
+ELSE (269) 31
+FOR (270) 32
+NEW (271) 57 58
+TRUE (272) 55
+FALSE (273) 56
+INTEGER (274) 54
+SIMICOLON (275) 32
+COLON (276) 3 10
+COMMA (277) 14 21 63
+ABSOLUTEVALUE (278)
+OPENPAREN (279) 10 53 58 59 60
+CLOSEPAREN (280) 10 53 58 59 60
+OPENBRACE (281) 2 3 10 30 31 32
+CLOSEBRACE (282) 2 3 10 30 31 32
+EQL (283) 29
+DOT (284) 51 60
+IDENTIFIER (285) 2 3 8 10 12 20 21 29 37 50 51 57 58 59 60
+PLUS (286) 39
+MINUS (287) 40 49
+TIMES (288) 41
+DIVIDE (289) 42
+NOT (290) 48
+
+
+Nonterminals, with rules where they appear
+
+$accept (36)
+    on left: 0
+Start (37)
+    on left: 1, on right: 0
+Class (38)
+    on left: 2 3 4, on right: 1 2 3
+ClassBody (39)
+    on left: 5 6 7, on right: 2 3
+Members (40)
+    on left: 8 9, on right: 5 6 8
+Methods (41)
+    on left: 10 11, on right: 5 7 10
+Arguments (42)
+    on left: 12 13, on right: 10 14
+ArgumentsPrime (43)
+    on left: 14 15, on right: 12
+Body (44)
+    on left: 16 17 18 19, on right: 10 16 17
+Declarations (45)
+    on left: 20, on right: 16
+DeclarationsPrime (46)
+    on left: 21 22, on right: 20 21
+Statements (47)
+    on left: 23 24 25 26 27 28, on right: 17 23 24 25 26 27 30 31 32
+Assignment (48)
+    on left: 29, on right: 23 32
+ifElse (49)
+    on left: 30 31, on right: 25
+forLoop (50)
+    on left: 32, on right: 26
+Print (51)
+    on left: 33, on right: 27
+Type (52)
+    on left: 34 35 36 37, on right: 8 10 12 20
+returnStatement (53)
+    on left: 38, on right: 18
+Expression (54)
+    on left: 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56
+    57 58, on right: 29 30 31 32 33 38 39 40 41 42 43 44 45 46 47 48
+    49 53 63 64
+MethodCall (55)
+    on left: 59 60, on right: 24 52
+Parameters (56)
+    on left: 61 62, on right: 58 59 60
+ParametersPrime (57)
+    on left: 63 64, on right: 61 63
+
+
+state 0
+
+    0 $accept: . Start $end
+
+    IDENTIFIER  shift, and go to state 1
+
+    $default  reduce using rule 4 (Class)
+
+    Start  go to state 2
+    Class  go to state 3
+
+
+state 1
+
+    2 Class: IDENTIFIER . OPENBRACE ClassBody CLOSEBRACE Class
+    3      | IDENTIFIER . COLON IDENTIFIER OPENBRACE ClassBody CLOSEBRACE Class
+
+    COLON      shift, and go to state 4
+    OPENBRACE  shift, and go to state 5
+
+
+state 2
+
+    0 $accept: Start . $end
+
+    $end  shift, and go to state 6
+
+
+state 3
+
+    1 Start: Class .
+
+    $default  reduce using rule 1 (Start)
+
+
+state 4
+
+    3 Class: IDENTIFIER COLON . IDENTIFIER OPENBRACE ClassBody CLOSEBRACE Class
+
+    IDENTIFIER  shift, and go to state 7
+
+
+state 5
+
+    2 Class: IDENTIFIER OPENBRACE . ClassBody CLOSEBRACE Class
+
+    BOOL        shift, and go to state 8
+    INT         shift, and go to state 9
+    NONE        shift, and go to state 10
+    IDENTIFIER  shift, and go to state 11
+
+    CLOSEBRACE  reduce using rule 9 (Members)
+    CLOSEBRACE  [reduce using rule 11 (Methods)]
+    IDENTIFIER  [reduce using rule 9 (Members)]
+    $default    reduce using rule 9 (Members)
+
+    ClassBody  go to state 12
+    Members    go to state 13
+    Methods    go to state 14
+    Type       go to state 15
+
+
+state 6
+
+    0 $accept: Start $end .
+
+    $default  accept
+
+
+state 7
+
+    3 Class: IDENTIFIER COLON IDENTIFIER . OPENBRACE ClassBody CLOSEBRACE Class
+
+    OPENBRACE  shift, and go to state 16
+
+
+state 8
+
+   35 Type: BOOL .
+
+    $default  reduce using rule 35 (Type)
+
+
+state 9
+
+   34 Type: INT .
+
+    $default  reduce using rule 34 (Type)
+
+
+state 10
+
+   36 Type: NONE .
+
+    $default  reduce using rule 36 (Type)
+
+
+state 11
+
+   10 Methods: IDENTIFIER . OPENPAREN Arguments CLOSEPAREN COLON Type OPENBRACE Body CLOSEBRACE Methods
+   37 Type: IDENTIFIER .
+
+    OPENPAREN  shift, and go to state 17
+
+    $default  reduce using rule 37 (Type)
+
+
+state 12
+
+    2 Class: IDENTIFIER OPENBRACE ClassBody . CLOSEBRACE Class
+
+    CLOSEBRACE  shift, and go to state 18
+
+
+state 13
+
+    5 ClassBody: Members . Methods
+    6          | Members .
+
+    IDENTIFIER  shift, and go to state 19
+
+    CLOSEBRACE  reduce using rule 6 (ClassBody)
+    CLOSEBRACE  [reduce using rule 11 (Methods)]
+    $default    reduce using rule 6 (ClassBody)
+
+    Methods  go to state 20
+
+
+state 14
+
+    7 ClassBody: Methods .
+
+    $default  reduce using rule 7 (ClassBody)
+
+
+state 15
+
+    8 Members: Type . IDENTIFIER Members
+
+    IDENTIFIER  shift, and go to state 21
+
+
+state 16
+
+    3 Class: IDENTIFIER COLON IDENTIFIER OPENBRACE . ClassBody CLOSEBRACE Class
+
+    BOOL        shift, and go to state 8
+    INT         shift, and go to state 9
+    NONE        shift, and go to state 10
+    IDENTIFIER  shift, and go to state 11
+
+    CLOSEBRACE  reduce using rule 9 (Members)
+    CLOSEBRACE  [reduce using rule 11 (Methods)]
+    IDENTIFIER  [reduce using rule 9 (Members)]
+    $default    reduce using rule 9 (Members)
+
+    ClassBody  go to state 22
+    Members    go to state 13
+    Methods    go to state 14
+    Type       go to state 15
+
+
+state 17
+
+   10 Methods: IDENTIFIER OPENPAREN . Arguments CLOSEPAREN COLON Type OPENBRACE Body CLOSEBRACE Methods
+
+    BOOL        shift, and go to state 8
+    INT         shift, and go to state 9
+    NONE        shift, and go to state 10
+    IDENTIFIER  shift, and go to state 23
+
+    $default  reduce using rule 13 (Arguments)
+
+    Arguments  go to state 24
+    Type       go to state 25
+
+
+state 18
+
+    2 Class: IDENTIFIER OPENBRACE ClassBody CLOSEBRACE . Class
+
+    IDENTIFIER  shift, and go to state 1
+
+    $default  reduce using rule 4 (Class)
+
+    Class  go to state 26
+
+
+state 19
+
+   10 Methods: IDENTIFIER . OPENPAREN Arguments CLOSEPAREN COLON Type OPENBRACE Body CLOSEBRACE Methods
+
+    OPENPAREN  shift, and go to state 17
+
+
+state 20
+
+    5 ClassBody: Members Methods .
+
+    $default  reduce using rule 5 (ClassBody)
+
+
+state 21
+
+    8 Members: Type IDENTIFIER . Members
+
+    BOOL        shift, and go to state 8
+    INT         shift, and go to state 9
+    NONE        shift, and go to state 10
+    IDENTIFIER  shift, and go to state 23
+
+    IDENTIFIER  [reduce using rule 9 (Members)]
+    $default    reduce using rule 9 (Members)
+
+    Members  go to state 27
+    Type     go to state 15
+
+
+state 22
+
+    3 Class: IDENTIFIER COLON IDENTIFIER OPENBRACE ClassBody . CLOSEBRACE Class
+
+    CLOSEBRACE  shift, and go to state 28
+
+
+state 23
+
+   37 Type: IDENTIFIER .
+
+    $default  reduce using rule 37 (Type)
+
+
+state 24
+
+   10 Methods: IDENTIFIER OPENPAREN Arguments . CLOSEPAREN COLON Type OPENBRACE Body CLOSEBRACE Methods
+
+    CLOSEPAREN  shift, and go to state 29
+
+
+state 25
+
+   12 Arguments: Type . IDENTIFIER ArgumentsPrime
+
+    IDENTIFIER  shift, and go to state 30
+
+
+state 26
+
+    2 Class: IDENTIFIER OPENBRACE ClassBody CLOSEBRACE Class .
+
+    $default  reduce using rule 2 (Class)
+
+
+state 27
+
+    8 Members: Type IDENTIFIER Members .
+
+    $default  reduce using rule 8 (Members)
+
+
+state 28
+
+    3 Class: IDENTIFIER COLON IDENTIFIER OPENBRACE ClassBody CLOSEBRACE . Class
+
+    IDENTIFIER  shift, and go to state 1
+
+    $default  reduce using rule 4 (Class)
+
+    Class  go to state 31
+
+
+state 29
+
+   10 Methods: IDENTIFIER OPENPAREN Arguments CLOSEPAREN . COLON Type OPENBRACE Body CLOSEBRACE Methods
+
+    COLON  shift, and go to state 32
+
+
+state 30
+
+   12 Arguments: Type IDENTIFIER . ArgumentsPrime
+
+    COMMA  shift, and go to state 33
+
+    $default  reduce using rule 15 (ArgumentsPrime)
+
+    ArgumentsPrime  go to state 34
+
+
+state 31
+
+    3 Class: IDENTIFIER COLON IDENTIFIER OPENBRACE ClassBody CLOSEBRACE Class .
+
+    $default  reduce using rule 3 (Class)
+
+
+state 32
+
+   10 Methods: IDENTIFIER OPENPAREN Arguments CLOSEPAREN COLON . Type OPENBRACE Body CLOSEBRACE Methods
+
+    BOOL        shift, and go to state 8
+    INT         shift, and go to state 9
+    NONE        shift, and go to state 10
+    IDENTIFIER  shift, and go to state 23
+
+    Type  go to state 35
+
+
+state 33
+
+   14 ArgumentsPrime: COMMA . Arguments
+
+    BOOL        shift, and go to state 8
+    INT         shift, and go to state 9
+    NONE        shift, and go to state 10
+    IDENTIFIER  shift, and go to state 23
+
+    $default  reduce using rule 13 (Arguments)
+
+    Arguments  go to state 36
+    Type       go to state 25
+
+
+state 34
+
+   12 Arguments: Type IDENTIFIER ArgumentsPrime .
+
+    $default  reduce using rule 12 (Arguments)
+
+
+state 35
+
+   10 Methods: IDENTIFIER OPENPAREN Arguments CLOSEPAREN COLON Type . OPENBRACE Body CLOSEBRACE Methods
+
+    OPENBRACE  shift, and go to state 37
+
+
+state 36
+
+   14 ArgumentsPrime: COMMA Arguments .
+
+    $default  reduce using rule 14 (ArgumentsPrime)
+
+
+state 37
+
+   10 Methods: IDENTIFIER OPENPAREN Arguments CLOSEPAREN COLON Type OPENBRACE . Body CLOSEBRACE Methods
+
+    BOOL        shift, and go to state 8
+    INT         shift, and go to state 9
+    NONE        shift, and go to state 10
+    PRINT       shift, and go to state 38
+    RETURN      shift, and go to state 39
+    IF          shift, and go to state 40
+    FOR         shift, and go to state 41
+    IDENTIFIER  shift, and go to state 42
+
+    BOOL        [reduce using rule 28 (Statements)]
+    INT         [reduce using rule 28 (Statements)]
+    NONE        [reduce using rule 28 (Statements)]
+    PRINT       [reduce using rule 28 (Statements)]
+    RETURN      [reduce using rule 28 (Statements)]
+    IF          [reduce using rule 28 (Statements)]
+    FOR         [reduce using rule 28 (Statements)]
+    CLOSEBRACE  reduce using rule 19 (Body)
+    CLOSEBRACE  [reduce using rule 28 (Statements)]
+    IDENTIFIER  [reduce using rule 28 (Statements)]
+    $default    reduce using rule 19 (Body)
+
+    Body             go to state 43
+    Declarations     go to state 44
+    Statements       go to state 45
+    Assignment       go to state 46
+    ifElse           go to state 47
+    forLoop          go to state 48
+    Print            go to state 49
+    Type             go to state 50
+    returnStatement  go to state 51
+    MethodCall       go to state 52
+
+
+state 38
+
+   33 Print: PRINT . Expression
+
+    NEW         shift, and go to state 53
+    TRUE        shift, and go to state 54
+    FALSE       shift, and go to state 55
+    INTEGER     shift, and go to state 56
+    OPENPAREN   shift, and go to state 57
+    IDENTIFIER  shift, and go to state 58
+    MINUS       shift, and go to state 59
+    NOT         shift, and go to state 60
+
+    Expression  go to state 61
+    MethodCall  go to state 62
+
+
+state 39
+
+   38 returnStatement: RETURN . Expression
+
+    NEW         shift, and go to state 53
+    TRUE        shift, and go to state 54
+    FALSE       shift, and go to state 55
+    INTEGER     shift, and go to state 56
+    OPENPAREN   shift, and go to state 57
+    IDENTIFIER  shift, and go to state 58
+    MINUS       shift, and go to state 59
+    NOT         shift, and go to state 60
+
+    Expression  go to state 63
+    MethodCall  go to state 62
+
+
+state 40
+
+   30 ifElse: IF . Expression OPENBRACE Statements CLOSEBRACE
+   31       | IF . Expression OPENBRACE Statements CLOSEBRACE ELSE OPENBRACE Statements CLOSEBRACE
+
+    NEW         shift, and go to state 53
+    TRUE        shift, and go to state 54
+    FALSE       shift, and go to state 55
+    INTEGER     shift, and go to state 56
+    OPENPAREN   shift, and go to state 57
+    IDENTIFIER  shift, and go to state 58
+    MINUS       shift, and go to state 59
+    NOT         shift, and go to state 60
+
+    Expression  go to state 64
+    MethodCall  go to state 62
+
+
+state 41
+
+   32 forLoop: FOR . Assignment SIMICOLON Expression SIMICOLON Assignment OPENBRACE Statements CLOSEBRACE
+
+    IDENTIFIER  shift, and go to state 65
+
+    Assignment  go to state 66
+
+
+state 42
+
+   29 Assignment: IDENTIFIER . EQL Expression
+   37 Type: IDENTIFIER .
+   59 MethodCall: IDENTIFIER . OPENPAREN Parameters CLOSEPAREN
+   60           | IDENTIFIER . DOT IDENTIFIER OPENPAREN Parameters CLOSEPAREN
+
+    OPENPAREN  shift, and go to state 67
+    EQL        shift, and go to state 68
+    DOT        shift, and go to state 69
+
+    $default  reduce using rule 37 (Type)
+
+
+state 43
+
+   10 Methods: IDENTIFIER OPENPAREN Arguments CLOSEPAREN COLON Type OPENBRACE Body . CLOSEBRACE Methods
+
+    CLOSEBRACE  shift, and go to state 70
+
+
+state 44
+
+   16 Body: Declarations . Body
+
+    BOOL        shift, and go to state 8
+    INT         shift, and go to state 9
+    NONE        shift, and go to state 10
+    PRINT       shift, and go to state 38
+    RETURN      shift, and go to state 39
+    IF          shift, and go to state 40
+    FOR         shift, and go to state 41
+    IDENTIFIER  shift, and go to state 42
+
+    BOOL        [reduce using rule 28 (Statements)]
+    INT         [reduce using rule 28 (Statements)]
+    NONE        [reduce using rule 28 (Statements)]
+    PRINT       [reduce using rule 28 (Statements)]
+    RETURN      [reduce using rule 28 (Statements)]
+    IF          [reduce using rule 28 (Statements)]
+    FOR         [reduce using rule 28 (Statements)]
+    CLOSEBRACE  reduce using rule 19 (Body)
+    CLOSEBRACE  [reduce using rule 28 (Statements)]
+    IDENTIFIER  [reduce using rule 28 (Statements)]
+    $default    reduce using rule 19 (Body)
+
+    Body             go to state 71
+    Declarations     go to state 44
+    Statements       go to state 45
+    Assignment       go to state 46
+    ifElse           go to state 47
+    forLoop          go to state 48
+    Print            go to state 49
+    Type             go to state 50
+    returnStatement  go to state 51
+    MethodCall       go to state 52
+
+
+state 45
+
+   17 Body: Statements . Body
+
+    BOOL        shift, and go to state 8
+    INT         shift, and go to state 9
+    NONE        shift, and go to state 10
+    PRINT       shift, and go to state 38
+    RETURN      shift, and go to state 39
+    IF          shift, and go to state 40
+    FOR         shift, and go to state 41
+    IDENTIFIER  shift, and go to state 42
+
+    BOOL        [reduce using rule 28 (Statements)]
+    INT         [reduce using rule 28 (Statements)]
+    NONE        [reduce using rule 28 (Statements)]
+    PRINT       [reduce using rule 28 (Statements)]
+    RETURN      [reduce using rule 28 (Statements)]
+    IF          [reduce using rule 28 (Statements)]
+    FOR         [reduce using rule 28 (Statements)]
+    CLOSEBRACE  reduce using rule 19 (Body)
+    CLOSEBRACE  [reduce using rule 28 (Statements)]
+    IDENTIFIER  [reduce using rule 28 (Statements)]
+    $default    reduce using rule 19 (Body)
+
+    Body             go to state 72
+    Declarations     go to state 44
+    Statements       go to state 45
+    Assignment       go to state 46
+    ifElse           go to state 47
+    forLoop          go to state 48
+    Print            go to state 49
+    Type             go to state 50
+    returnStatement  go to state 51
+    MethodCall       go to state 52
+
+
+state 46
+
+   23 Statements: Assignment . Statements
+
+    PRINT       shift, and go to state 38
+    IF          shift, and go to state 40
+    FOR         shift, and go to state 41
+    IDENTIFIER  shift, and go to state 73
+
+    PRINT       [reduce using rule 28 (Statements)]
+    IF          [reduce using rule 28 (Statements)]
+    FOR         [reduce using rule 28 (Statements)]
+    IDENTIFIER  [reduce using rule 28 (Statements)]
+    $default    reduce using rule 28 (Statements)
+
+    Statements  go to state 74
+    Assignment  go to state 46
+    ifElse      go to state 47
+    forLoop     go to state 48
+    Print       go to state 49
+    MethodCall  go to state 52
+
+
+state 47
+
+   25 Statements: ifElse . Statements
+
+    PRINT       shift, and go to state 38
+    IF          shift, and go to state 40
+    FOR         shift, and go to state 41
+    IDENTIFIER  shift, and go to state 73
+
+    PRINT       [reduce using rule 28 (Statements)]
+    IF          [reduce using rule 28 (Statements)]
+    FOR         [reduce using rule 28 (Statements)]
+    IDENTIFIER  [reduce using rule 28 (Statements)]
+    $default    reduce using rule 28 (Statements)
+
+    Statements  go to state 75
+    Assignment  go to state 46
+    ifElse      go to state 47
+    forLoop     go to state 48
+    Print       go to state 49
+    MethodCall  go to state 52
+
+
+state 48
+
+   26 Statements: forLoop . Statements
+
+    PRINT       shift, and go to state 38
+    IF          shift, and go to state 40
+    FOR         shift, and go to state 41
+    IDENTIFIER  shift, and go to state 73
+
+    PRINT       [reduce using rule 28 (Statements)]
+    IF          [reduce using rule 28 (Statements)]
+    FOR         [reduce using rule 28 (Statements)]
+    IDENTIFIER  [reduce using rule 28 (Statements)]
+    $default    reduce using rule 28 (Statements)
+
+    Statements  go to state 76
+    Assignment  go to state 46
+    ifElse      go to state 47
+    forLoop     go to state 48
+    Print       go to state 49
+    MethodCall  go to state 52
+
+
+state 49
+
+   27 Statements: Print . Statements
+
+    PRINT       shift, and go to state 38
+    IF          shift, and go to state 40
+    FOR         shift, and go to state 41
+    IDENTIFIER  shift, and go to state 73
+
+    PRINT       [reduce using rule 28 (Statements)]
+    IF          [reduce using rule 28 (Statements)]
+    FOR         [reduce using rule 28 (Statements)]
+    IDENTIFIER  [reduce using rule 28 (Statements)]
+    $default    reduce using rule 28 (Statements)
+
+    Statements  go to state 77
+    Assignment  go to state 46
+    ifElse      go to state 47
+    forLoop     go to state 48
+    Print       go to state 49
+    MethodCall  go to state 52
+
+
+state 50
+
+   20 Declarations: Type . IDENTIFIER DeclarationsPrime
+
+    IDENTIFIER  shift, and go to state 78
+
+
+state 51
+
+   18 Body: returnStatement .
+
+    $default  reduce using rule 18 (Body)
+
+
+state 52
+
+   24 Statements: MethodCall . Statements
+
+    PRINT       shift, and go to state 38
+    IF          shift, and go to state 40
+    FOR         shift, and go to state 41
+    IDENTIFIER  shift, and go to state 73
+
+    PRINT       [reduce using rule 28 (Statements)]
+    IF          [reduce using rule 28 (Statements)]
+    FOR         [reduce using rule 28 (Statements)]
+    IDENTIFIER  [reduce using rule 28 (Statements)]
+    $default    reduce using rule 28 (Statements)
+
+    Statements  go to state 79
+    Assignment  go to state 46
+    ifElse      go to state 47
+    forLoop     go to state 48
+    Print       go to state 49
+    MethodCall  go to state 52
+
+
+state 53
+
+   57 Expression: NEW . IDENTIFIER
+   58           | NEW . IDENTIFIER OPENPAREN Parameters CLOSEPAREN
+
+    IDENTIFIER  shift, and go to state 80
+
+
+state 54
+
+   55 Expression: TRUE .
+
+    $default  reduce using rule 55 (Expression)
+
+
+state 55
+
+   56 Expression: FALSE .
+
+    $default  reduce using rule 56 (Expression)
+
+
+state 56
+
+   54 Expression: INTEGER .
+
+    $default  reduce using rule 54 (Expression)
+
+
+state 57
+
+   53 Expression: OPENPAREN . Expression CLOSEPAREN
+
+    NEW         shift, and go to state 53
+    TRUE        shift, and go to state 54
+    FALSE       shift, and go to state 55
+    INTEGER     shift, and go to state 56
+    OPENPAREN   shift, and go to state 57
+    IDENTIFIER  shift, and go to state 58
+    MINUS       shift, and go to state 59
+    NOT         shift, and go to state 60
+
+    Expression  go to state 81
+    MethodCall  go to state 62
+
+
+state 58
+
+   50 Expression: IDENTIFIER .
+   51           | IDENTIFIER . DOT IDENTIFIER
+   59 MethodCall: IDENTIFIER . OPENPAREN Parameters CLOSEPAREN
+   60           | IDENTIFIER . DOT IDENTIFIER OPENPAREN Parameters CLOSEPAREN
+
+    OPENPAREN  shift, and go to state 67
+    DOT        shift, and go to state 82
+
+    $default  reduce using rule 50 (Expression)
+
+
+state 59
+
+   49 Expression: MINUS . Expression
+
+    NEW         shift, and go to state 53
+    TRUE        shift, and go to state 54
+    FALSE       shift, and go to state 55
+    INTEGER     shift, and go to state 56
+    OPENPAREN   shift, and go to state 57
+    IDENTIFIER  shift, and go to state 58
+    MINUS       shift, and go to state 59
+    NOT         shift, and go to state 60
+
+    Expression  go to state 83
+    MethodCall  go to state 62
+
+
+state 60
+
+   48 Expression: NOT . Expression
+
+    NEW         shift, and go to state 53
+    TRUE        shift, and go to state 54
+    FALSE       shift, and go to state 55
+    INTEGER     shift, and go to state 56
+    OPENPAREN   shift, and go to state 57
+    IDENTIFIER  shift, and go to state 58
+    MINUS       shift, and go to state 59
+    NOT         shift, and go to state 60
+
+    Expression  go to state 84
+    MethodCall  go to state 62
+
+
+state 61
+
+   33 Print: PRINT Expression .
+   39 Expression: Expression . PLUS Expression
+   40           | Expression . MINUS Expression
+   41           | Expression . TIMES Expression
+   42           | Expression . DIVIDE Expression
+   43           | Expression . LESS Expression
+   44           | Expression . LESSEQL Expression
+   45           | Expression . IFEQL Expression
+   46           | Expression . AND Expression
+   47           | Expression . OR Expression
+
+    OR       shift, and go to state 85
+    AND      shift, and go to state 86
+    LESS     shift, and go to state 87
+    LESSEQL  shift, and go to state 88
+    IFEQL    shift, and go to state 89
+    PLUS     shift, and go to state 90
+    MINUS    shift, and go to state 91
+    TIMES    shift, and go to state 92
+    DIVIDE   shift, and go to state 93
+
+    $default  reduce using rule 33 (Print)
+
+
+state 62
+
+   52 Expression: MethodCall .
+
+    $default  reduce using rule 52 (Expression)
+
+
+state 63
+
+   38 returnStatement: RETURN Expression .
+   39 Expression: Expression . PLUS Expression
+   40           | Expression . MINUS Expression
+   41           | Expression . TIMES Expression
+   42           | Expression . DIVIDE Expression
+   43           | Expression . LESS Expression
+   44           | Expression . LESSEQL Expression
+   45           | Expression . IFEQL Expression
+   46           | Expression . AND Expression
+   47           | Expression . OR Expression
+
+    OR       shift, and go to state 85
+    AND      shift, and go to state 86
+    LESS     shift, and go to state 87
+    LESSEQL  shift, and go to state 88
+    IFEQL    shift, and go to state 89
+    PLUS     shift, and go to state 90
+    MINUS    shift, and go to state 91
+    TIMES    shift, and go to state 92
+    DIVIDE   shift, and go to state 93
+
+    $default  reduce using rule 38 (returnStatement)
+
+
+state 64
+
+   30 ifElse: IF Expression . OPENBRACE Statements CLOSEBRACE
+   31       | IF Expression . OPENBRACE Statements CLOSEBRACE ELSE OPENBRACE Statements CLOSEBRACE
+   39 Expression: Expression . PLUS Expression
+   40           | Expression . MINUS Expression
+   41           | Expression . TIMES Expression
+   42           | Expression . DIVIDE Expression
+   43           | Expression . LESS Expression
+   44           | Expression . LESSEQL Expression
+   45           | Expression . IFEQL Expression
+   46           | Expression . AND Expression
+   47           | Expression . OR Expression
+
+    OR         shift, and go to state 85
+    AND        shift, and go to state 86
+    LESS       shift, and go to state 87
+    LESSEQL    shift, and go to state 88
+    IFEQL      shift, and go to state 89
+    OPENBRACE  shift, and go to state 94
+    PLUS       shift, and go to state 90
+    MINUS      shift, and go to state 91
+    TIMES      shift, and go to state 92
+    DIVIDE     shift, and go to state 93
+
+
+state 65
+
+   29 Assignment: IDENTIFIER . EQL Expression
+
+    EQL  shift, and go to state 68
+
+
+state 66
+
+   32 forLoop: FOR Assignment . SIMICOLON Expression SIMICOLON Assignment OPENBRACE Statements CLOSEBRACE
+
+    SIMICOLON  shift, and go to state 95
+
+
+state 67
+
+   59 MethodCall: IDENTIFIER OPENPAREN . Parameters CLOSEPAREN
+
+    NEW         shift, and go to state 53
+    TRUE        shift, and go to state 54
+    FALSE       shift, and go to state 55
+    INTEGER     shift, and go to state 56
+    OPENPAREN   shift, and go to state 57
+    IDENTIFIER  shift, and go to state 58
+    MINUS       shift, and go to state 59
+    NOT         shift, and go to state 60
+
+    $default  reduce using rule 62 (Parameters)
+
+    Expression       go to state 96
+    MethodCall       go to state 62
+    Parameters       go to state 97
+    ParametersPrime  go to state 98
+
+
+state 68
+
+   29 Assignment: IDENTIFIER EQL . Expression
+
+    NEW         shift, and go to state 53
+    TRUE        shift, and go to state 54
+    FALSE       shift, and go to state 55
+    INTEGER     shift, and go to state 56
+    OPENPAREN   shift, and go to state 57
+    IDENTIFIER  shift, and go to state 58
+    MINUS       shift, and go to state 59
+    NOT         shift, and go to state 60
+
+    Expression  go to state 99
+    MethodCall  go to state 62
+
+
+state 69
+
+   60 MethodCall: IDENTIFIER DOT . IDENTIFIER OPENPAREN Parameters CLOSEPAREN
+
+    IDENTIFIER  shift, and go to state 100
+
+
+state 70
+
+   10 Methods: IDENTIFIER OPENPAREN Arguments CLOSEPAREN COLON Type OPENBRACE Body CLOSEBRACE . Methods
+
+    IDENTIFIER  shift, and go to state 19
+
+    $default  reduce using rule 11 (Methods)
+
+    Methods  go to state 101
+
+
+state 71
+
+   16 Body: Declarations Body .
+
+    $default  reduce using rule 16 (Body)
+
+
+state 72
+
+   17 Body: Statements Body .
+
+    $default  reduce using rule 17 (Body)
+
+
+state 73
+
+   29 Assignment: IDENTIFIER . EQL Expression
+   59 MethodCall: IDENTIFIER . OPENPAREN Parameters CLOSEPAREN
+   60           | IDENTIFIER . DOT IDENTIFIER OPENPAREN Parameters CLOSEPAREN
+
+    OPENPAREN  shift, and go to state 67
+    EQL        shift, and go to state 68
+    DOT        shift, and go to state 69
+
+
+state 74
+
+   23 Statements: Assignment Statements .
+
+    $default  reduce using rule 23 (Statements)
+
+
+state 75
+
+   25 Statements: ifElse Statements .
+
+    $default  reduce using rule 25 (Statements)
+
+
+state 76
+
+   26 Statements: forLoop Statements .
+
+    $default  reduce using rule 26 (Statements)
+
+
+state 77
+
+   27 Statements: Print Statements .
+
+    $default  reduce using rule 27 (Statements)
+
+
+state 78
+
+   20 Declarations: Type IDENTIFIER . DeclarationsPrime
+
+    COMMA  shift, and go to state 102
+
+    $default  reduce using rule 22 (DeclarationsPrime)
+
+    DeclarationsPrime  go to state 103
+
+
+state 79
+
+   24 Statements: MethodCall Statements .
+
+    $default  reduce using rule 24 (Statements)
+
+
+state 80
+
+   57 Expression: NEW IDENTIFIER .
+   58           | NEW IDENTIFIER . OPENPAREN Parameters CLOSEPAREN
+
+    OPENPAREN  shift, and go to state 104
+
+    $default  reduce using rule 57 (Expression)
+
+
+state 81
+
+   39 Expression: Expression . PLUS Expression
+   40           | Expression . MINUS Expression
+   41           | Expression . TIMES Expression
+   42           | Expression . DIVIDE Expression
+   43           | Expression . LESS Expression
+   44           | Expression . LESSEQL Expression
+   45           | Expression . IFEQL Expression
+   46           | Expression . AND Expression
+   47           | Expression . OR Expression
+   53           | OPENPAREN Expression . CLOSEPAREN
+
+    OR          shift, and go to state 85
+    AND         shift, and go to state 86
+    LESS        shift, and go to state 87
+    LESSEQL     shift, and go to state 88
+    IFEQL       shift, and go to state 89
+    CLOSEPAREN  shift, and go to state 105
+    PLUS        shift, and go to state 90
+    MINUS       shift, and go to state 91
+    TIMES       shift, and go to state 92
+    DIVIDE      shift, and go to state 93
+
+
+state 82
+
+   51 Expression: IDENTIFIER DOT . IDENTIFIER
+   60 MethodCall: IDENTIFIER DOT . IDENTIFIER OPENPAREN Parameters CLOSEPAREN
+
+    IDENTIFIER  shift, and go to state 106
+
+
+state 83
+
+   39 Expression: Expression . PLUS Expression
+   40           | Expression . MINUS Expression
+   41           | Expression . TIMES Expression
+   42           | Expression . DIVIDE Expression
+   43           | Expression . LESS Expression
+   44           | Expression . LESSEQL Expression
+   45           | Expression . IFEQL Expression
+   46           | Expression . AND Expression
+   47           | Expression . OR Expression
+   49           | MINUS Expression .
+
+    $default  reduce using rule 49 (Expression)
+
+
+state 84
+
+   39 Expression: Expression . PLUS Expression
+   40           | Expression . MINUS Expression
+   41           | Expression . TIMES Expression
+   42           | Expression . DIVIDE Expression
+   43           | Expression . LESS Expression
+   44           | Expression . LESSEQL Expression
+   45           | Expression . IFEQL Expression
+   46           | Expression . AND Expression
+   47           | Expression . OR Expression
+   48           | NOT Expression .
+
+    $default  reduce using rule 48 (Expression)
+
+
+state 85
+
+   47 Expression: Expression OR . Expression
+
+    NEW         shift, and go to state 53
+    TRUE        shift, and go to state 54
+    FALSE       shift, and go to state 55
+    INTEGER     shift, and go to state 56
+    OPENPAREN   shift, and go to state 57
+    IDENTIFIER  shift, and go to state 58
+    MINUS       shift, and go to state 59
+    NOT         shift, and go to state 60
+
+    Expression  go to state 107
+    MethodCall  go to state 62
+
+
+state 86
+
+   46 Expression: Expression AND . Expression
+
+    NEW         shift, and go to state 53
+    TRUE        shift, and go to state 54
+    FALSE       shift, and go to state 55
+    INTEGER     shift, and go to state 56
+    OPENPAREN   shift, and go to state 57
+    IDENTIFIER  shift, and go to state 58
+    MINUS       shift, and go to state 59
+    NOT         shift, and go to state 60
+
+    Expression  go to state 108
+    MethodCall  go to state 62
+
+
+state 87
+
+   43 Expression: Expression LESS . Expression
+
+    NEW         shift, and go to state 53
+    TRUE        shift, and go to state 54
+    FALSE       shift, and go to state 55
+    INTEGER     shift, and go to state 56
+    OPENPAREN   shift, and go to state 57
+    IDENTIFIER  shift, and go to state 58
+    MINUS       shift, and go to state 59
+    NOT         shift, and go to state 60
+
+    Expression  go to state 109
+    MethodCall  go to state 62
+
+
+state 88
+
+   44 Expression: Expression LESSEQL . Expression
+
+    NEW         shift, and go to state 53
+    TRUE        shift, and go to state 54
+    FALSE       shift, and go to state 55
+    INTEGER     shift, and go to state 56
+    OPENPAREN   shift, and go to state 57
+    IDENTIFIER  shift, and go to state 58
+    MINUS       shift, and go to state 59
+    NOT         shift, and go to state 60
+
+    Expression  go to state 110
+    MethodCall  go to state 62
+
+
+state 89
+
+   45 Expression: Expression IFEQL . Expression
+
+    NEW         shift, and go to state 53
+    TRUE        shift, and go to state 54
+    FALSE       shift, and go to state 55
+    INTEGER     shift, and go to state 56
+    OPENPAREN   shift, and go to state 57
+    IDENTIFIER  shift, and go to state 58
+    MINUS       shift, and go to state 59
+    NOT         shift, and go to state 60
+
+    Expression  go to state 111
+    MethodCall  go to state 62
+
+
+state 90
+
+   39 Expression: Expression PLUS . Expression
+
+    NEW         shift, and go to state 53
+    TRUE        shift, and go to state 54
+    FALSE       shift, and go to state 55
+    INTEGER     shift, and go to state 56
+    OPENPAREN   shift, and go to state 57
+    IDENTIFIER  shift, and go to state 58
+    MINUS       shift, and go to state 59
+    NOT         shift, and go to state 60
+
+    Expression  go to state 112
+    MethodCall  go to state 62
+
+
+state 91
+
+   40 Expression: Expression MINUS . Expression
+
+    NEW         shift, and go to state 53
+    TRUE        shift, and go to state 54
+    FALSE       shift, and go to state 55
+    INTEGER     shift, and go to state 56
+    OPENPAREN   shift, and go to state 57
+    IDENTIFIER  shift, and go to state 58
+    MINUS       shift, and go to state 59
+    NOT         shift, and go to state 60
+
+    Expression  go to state 113
+    MethodCall  go to state 62
+
+
+state 92
+
+   41 Expression: Expression TIMES . Expression
+
+    NEW         shift, and go to state 53
+    TRUE        shift, and go to state 54
+    FALSE       shift, and go to state 55
+    INTEGER     shift, and go to state 56
+    OPENPAREN   shift, and go to state 57
+    IDENTIFIER  shift, and go to state 58
+    MINUS       shift, and go to state 59
+    NOT         shift, and go to state 60
+
+    Expression  go to state 114
+    MethodCall  go to state 62
+
+
+state 93
+
+   42 Expression: Expression DIVIDE . Expression
+
+    NEW         shift, and go to state 53
+    TRUE        shift, and go to state 54
+    FALSE       shift, and go to state 55
+    INTEGER     shift, and go to state 56
+    OPENPAREN   shift, and go to state 57
+    IDENTIFIER  shift, and go to state 58
+    MINUS       shift, and go to state 59
+    NOT         shift, and go to state 60
+
+    Expression  go to state 115
+    MethodCall  go to state 62
+
+
+state 94
+
+   30 ifElse: IF Expression OPENBRACE . Statements CLOSEBRACE
+   31       | IF Expression OPENBRACE . Statements CLOSEBRACE ELSE OPENBRACE Statements CLOSEBRACE
+
+    PRINT       shift, and go to state 38
+    IF          shift, and go to state 40
+    FOR         shift, and go to state 41
+    IDENTIFIER  shift, and go to state 73
+
+    $default  reduce using rule 28 (Statements)
+
+    Statements  go to state 116
+    Assignment  go to state 46
+    ifElse      go to state 47
+    forLoop     go to state 48
+    Print       go to state 49
+    MethodCall  go to state 52
+
+
+state 95
+
+   32 forLoop: FOR Assignment SIMICOLON . Expression SIMICOLON Assignment OPENBRACE Statements CLOSEBRACE
+
+    NEW         shift, and go to state 53
+    TRUE        shift, and go to state 54
+    FALSE       shift, and go to state 55
+    INTEGER     shift, and go to state 56
+    OPENPAREN   shift, and go to state 57
+    IDENTIFIER  shift, and go to state 58
+    MINUS       shift, and go to state 59
+    NOT         shift, and go to state 60
+
+    Expression  go to state 117
+    MethodCall  go to state 62
+
+
+state 96
+
+   39 Expression: Expression . PLUS Expression
+   40           | Expression . MINUS Expression
+   41           | Expression . TIMES Expression
+   42           | Expression . DIVIDE Expression
+   43           | Expression . LESS Expression
+   44           | Expression . LESSEQL Expression
+   45           | Expression . IFEQL Expression
+   46           | Expression . AND Expression
+   47           | Expression . OR Expression
+   64 ParametersPrime: Expression .
+
+    OR       shift, and go to state 85
+    AND      shift, and go to state 86
+    LESS     shift, and go to state 87
+    LESSEQL  shift, and go to state 88
+    IFEQL    shift, and go to state 89
+    PLUS     shift, and go to state 90
+    MINUS    shift, and go to state 91
+    TIMES    shift, and go to state 92
+    DIVIDE   shift, and go to state 93
+
+    $default  reduce using rule 64 (ParametersPrime)
+
+
+state 97
+
+   59 MethodCall: IDENTIFIER OPENPAREN Parameters . CLOSEPAREN
+
+    CLOSEPAREN  shift, and go to state 118
+
+
+state 98
+
+   61 Parameters: ParametersPrime .
+   63 ParametersPrime: ParametersPrime . COMMA Expression
+
+    COMMA  shift, and go to state 119
+
+    $default  reduce using rule 61 (Parameters)
+
+
+state 99
+
+   29 Assignment: IDENTIFIER EQL Expression .
+   39 Expression: Expression . PLUS Expression
+   40           | Expression . MINUS Expression
+   41           | Expression . TIMES Expression
+   42           | Expression . DIVIDE Expression
+   43           | Expression . LESS Expression
+   44           | Expression . LESSEQL Expression
+   45           | Expression . IFEQL Expression
+   46           | Expression . AND Expression
+   47           | Expression . OR Expression
+
+    OR       shift, and go to state 85
+    AND      shift, and go to state 86
+    LESS     shift, and go to state 87
+    LESSEQL  shift, and go to state 88
+    IFEQL    shift, and go to state 89
+    PLUS     shift, and go to state 90
+    MINUS    shift, and go to state 91
+    TIMES    shift, and go to state 92
+    DIVIDE   shift, and go to state 93
+
+    $default  reduce using rule 29 (Assignment)
+
+
+state 100
+
+   60 MethodCall: IDENTIFIER DOT IDENTIFIER . OPENPAREN Parameters CLOSEPAREN
+
+    OPENPAREN  shift, and go to state 120
+
+
+state 101
+
+   10 Methods: IDENTIFIER OPENPAREN Arguments CLOSEPAREN COLON Type OPENBRACE Body CLOSEBRACE Methods .
+
+    $default  reduce using rule 10 (Methods)
+
+
+state 102
+
+   21 DeclarationsPrime: COMMA . IDENTIFIER DeclarationsPrime
+
+    IDENTIFIER  shift, and go to state 121
+
+
+state 103
+
+   20 Declarations: Type IDENTIFIER DeclarationsPrime .
+
+    $default  reduce using rule 20 (Declarations)
+
+
+state 104
+
+   58 Expression: NEW IDENTIFIER OPENPAREN . Parameters CLOSEPAREN
+
+    NEW         shift, and go to state 53
+    TRUE        shift, and go to state 54
+    FALSE       shift, and go to state 55
+    INTEGER     shift, and go to state 56
+    OPENPAREN   shift, and go to state 57
+    IDENTIFIER  shift, and go to state 58
+    MINUS       shift, and go to state 59
+    NOT         shift, and go to state 60
+
+    $default  reduce using rule 62 (Parameters)
+
+    Expression       go to state 96
+    MethodCall       go to state 62
+    Parameters       go to state 122
+    ParametersPrime  go to state 98
+
+
+state 105
+
+   53 Expression: OPENPAREN Expression CLOSEPAREN .
+
+    $default  reduce using rule 53 (Expression)
+
+
+state 106
+
+   51 Expression: IDENTIFIER DOT IDENTIFIER .
+   60 MethodCall: IDENTIFIER DOT IDENTIFIER . OPENPAREN Parameters CLOSEPAREN
+
+    OPENPAREN  shift, and go to state 120
+
+    $default  reduce using rule 51 (Expression)
+
+
+state 107
+
+   39 Expression: Expression . PLUS Expression
+   40           | Expression . MINUS Expression
+   41           | Expression . TIMES Expression
+   42           | Expression . DIVIDE Expression
+   43           | Expression . LESS Expression
+   44           | Expression . LESSEQL Expression
+   45           | Expression . IFEQL Expression
+   46           | Expression . AND Expression
+   47           | Expression . OR Expression
+   47           | Expression OR Expression .
+
+    AND      shift, and go to state 86
+    LESS     shift, and go to state 87
+    LESSEQL  shift, and go to state 88
+    IFEQL    shift, and go to state 89
+    PLUS     shift, and go to state 90
+    MINUS    shift, and go to state 91
+    TIMES    shift, and go to state 92
+    DIVIDE   shift, and go to state 93
+
+    $default  reduce using rule 47 (Expression)
+
+
+state 108
+
+   39 Expression: Expression . PLUS Expression
+   40           | Expression . MINUS Expression
+   41           | Expression . TIMES Expression
+   42           | Expression . DIVIDE Expression
+   43           | Expression . LESS Expression
+   44           | Expression . LESSEQL Expression
+   45           | Expression . IFEQL Expression
+   46           | Expression . AND Expression
+   46           | Expression AND Expression .
+   47           | Expression . OR Expression
+
+    LESS     shift, and go to state 87
+    LESSEQL  shift, and go to state 88
+    IFEQL    shift, and go to state 89
+    PLUS     shift, and go to state 90
+    MINUS    shift, and go to state 91
+    TIMES    shift, and go to state 92
+    DIVIDE   shift, and go to state 93
+
+    $default  reduce using rule 46 (Expression)
+
+
+state 109
+
+   39 Expression: Expression . PLUS Expression
+   40           | Expression . MINUS Expression
+   41           | Expression . TIMES Expression
+   42           | Expression . DIVIDE Expression
+   43           | Expression . LESS Expression
+   43           | Expression LESS Expression .
+   44           | Expression . LESSEQL Expression
+   45           | Expression . IFEQL Expression
+   46           | Expression . AND Expression
+   47           | Expression . OR Expression
+
+    PLUS    shift, and go to state 90
+    MINUS   shift, and go to state 91
+    TIMES   shift, and go to state 92
+    DIVIDE  shift, and go to state 93
+
+    $default  reduce using rule 43 (Expression)
+
+
+state 110
+
+   39 Expression: Expression . PLUS Expression
+   40           | Expression . MINUS Expression
+   41           | Expression . TIMES Expression
+   42           | Expression . DIVIDE Expression
+   43           | Expression . LESS Expression
+   44           | Expression . LESSEQL Expression
+   44           | Expression LESSEQL Expression .
+   45           | Expression . IFEQL Expression
+   46           | Expression . AND Expression
+   47           | Expression . OR Expression
+
+    PLUS    shift, and go to state 90
+    MINUS   shift, and go to state 91
+    TIMES   shift, and go to state 92
+    DIVIDE  shift, and go to state 93
+
+    $default  reduce using rule 44 (Expression)
+
+
+state 111
+
+   39 Expression: Expression . PLUS Expression
+   40           | Expression . MINUS Expression
+   41           | Expression . TIMES Expression
+   42           | Expression . DIVIDE Expression
+   43           | Expression . LESS Expression
+   44           | Expression . LESSEQL Expression
+   45           | Expression . IFEQL Expression
+   45           | Expression IFEQL Expression .
+   46           | Expression . AND Expression
+   47           | Expression . OR Expression
+
+    PLUS    shift, and go to state 90
+    MINUS   shift, and go to state 91
+    TIMES   shift, and go to state 92
+    DIVIDE  shift, and go to state 93
+
+    $default  reduce using rule 45 (Expression)
+
+
+state 112
+
+   39 Expression: Expression . PLUS Expression
+   39           | Expression PLUS Expression .
+   40           | Expression . MINUS Expression
+   41           | Expression . TIMES Expression
+   42           | Expression . DIVIDE Expression
+   43           | Expression . LESS Expression
+   44           | Expression . LESSEQL Expression
+   45           | Expression . IFEQL Expression
+   46           | Expression . AND Expression
+   47           | Expression . OR Expression
+
+    TIMES   shift, and go to state 92
+    DIVIDE  shift, and go to state 93
+
+    $default  reduce using rule 39 (Expression)
+
+
+state 113
+
+   39 Expression: Expression . PLUS Expression
+   40           | Expression . MINUS Expression
+   40           | Expression MINUS Expression .
+   41           | Expression . TIMES Expression
+   42           | Expression . DIVIDE Expression
+   43           | Expression . LESS Expression
+   44           | Expression . LESSEQL Expression
+   45           | Expression . IFEQL Expression
+   46           | Expression . AND Expression
+   47           | Expression . OR Expression
+
+    TIMES   shift, and go to state 92
+    DIVIDE  shift, and go to state 93
+
+    $default  reduce using rule 40 (Expression)
+
+
+state 114
+
+   39 Expression: Expression . PLUS Expression
+   40           | Expression . MINUS Expression
+   41           | Expression . TIMES Expression
+   41           | Expression TIMES Expression .
+   42           | Expression . DIVIDE Expression
+   43           | Expression . LESS Expression
+   44           | Expression . LESSEQL Expression
+   45           | Expression . IFEQL Expression
+   46           | Expression . AND Expression
+   47           | Expression . OR Expression
+
+    $default  reduce using rule 41 (Expression)
+
+
+state 115
+
+   39 Expression: Expression . PLUS Expression
+   40           | Expression . MINUS Expression
+   41           | Expression . TIMES Expression
+   42           | Expression . DIVIDE Expression
+   42           | Expression DIVIDE Expression .
+   43           | Expression . LESS Expression
+   44           | Expression . LESSEQL Expression
+   45           | Expression . IFEQL Expression
+   46           | Expression . AND Expression
+   47           | Expression . OR Expression
+
+    $default  reduce using rule 42 (Expression)
+
+
+state 116
+
+   30 ifElse: IF Expression OPENBRACE Statements . CLOSEBRACE
+   31       | IF Expression OPENBRACE Statements . CLOSEBRACE ELSE OPENBRACE Statements CLOSEBRACE
+
+    CLOSEBRACE  shift, and go to state 123
+
+
+state 117
+
+   32 forLoop: FOR Assignment SIMICOLON Expression . SIMICOLON Assignment OPENBRACE Statements CLOSEBRACE
+   39 Expression: Expression . PLUS Expression
+   40           | Expression . MINUS Expression
+   41           | Expression . TIMES Expression
+   42           | Expression . DIVIDE Expression
+   43           | Expression . LESS Expression
+   44           | Expression . LESSEQL Expression
+   45           | Expression . IFEQL Expression
+   46           | Expression . AND Expression
+   47           | Expression . OR Expression
+
+    OR         shift, and go to state 85
+    AND        shift, and go to state 86
+    LESS       shift, and go to state 87
+    LESSEQL    shift, and go to state 88
+    IFEQL      shift, and go to state 89
+    SIMICOLON  shift, and go to state 124
+    PLUS       shift, and go to state 90
+    MINUS      shift, and go to state 91
+    TIMES      shift, and go to state 92
+    DIVIDE     shift, and go to state 93
+
+
+state 118
+
+   59 MethodCall: IDENTIFIER OPENPAREN Parameters CLOSEPAREN .
+
+    $default  reduce using rule 59 (MethodCall)
+
+
+state 119
+
+   63 ParametersPrime: ParametersPrime COMMA . Expression
+
+    NEW         shift, and go to state 53
+    TRUE        shift, and go to state 54
+    FALSE       shift, and go to state 55
+    INTEGER     shift, and go to state 56
+    OPENPAREN   shift, and go to state 57
+    IDENTIFIER  shift, and go to state 58
+    MINUS       shift, and go to state 59
+    NOT         shift, and go to state 60
+
+    Expression  go to state 125
+    MethodCall  go to state 62
+
+
+state 120
+
+   60 MethodCall: IDENTIFIER DOT IDENTIFIER OPENPAREN . Parameters CLOSEPAREN
+
+    NEW         shift, and go to state 53
+    TRUE        shift, and go to state 54
+    FALSE       shift, and go to state 55
+    INTEGER     shift, and go to state 56
+    OPENPAREN   shift, and go to state 57
+    IDENTIFIER  shift, and go to state 58
+    MINUS       shift, and go to state 59
+    NOT         shift, and go to state 60
+
+    $default  reduce using rule 62 (Parameters)
+
+    Expression       go to state 96
+    MethodCall       go to state 62
+    Parameters       go to state 126
+    ParametersPrime  go to state 98
+
+
+state 121
+
+   21 DeclarationsPrime: COMMA IDENTIFIER . DeclarationsPrime
+
+    COMMA  shift, and go to state 102
+
+    $default  reduce using rule 22 (DeclarationsPrime)
+
+    DeclarationsPrime  go to state 127
+
+
+state 122
+
+   58 Expression: NEW IDENTIFIER OPENPAREN Parameters . CLOSEPAREN
+
+    CLOSEPAREN  shift, and go to state 128
+
+
+state 123
+
+   30 ifElse: IF Expression OPENBRACE Statements CLOSEBRACE .
+   31       | IF Expression OPENBRACE Statements CLOSEBRACE . ELSE OPENBRACE Statements CLOSEBRACE
+
+    ELSE  shift, and go to state 129
+
+    $default  reduce using rule 30 (ifElse)
+
+
+state 124
+
+   32 forLoop: FOR Assignment SIMICOLON Expression SIMICOLON . Assignment OPENBRACE Statements CLOSEBRACE
+
+    IDENTIFIER  shift, and go to state 65
+
+    Assignment  go to state 130
+
+
+state 125
+
+   39 Expression: Expression . PLUS Expression
+   40           | Expression . MINUS Expression
+   41           | Expression . TIMES Expression
+   42           | Expression . DIVIDE Expression
+   43           | Expression . LESS Expression
+   44           | Expression . LESSEQL Expression
+   45           | Expression . IFEQL Expression
+   46           | Expression . AND Expression
+   47           | Expression . OR Expression
+   63 ParametersPrime: ParametersPrime COMMA Expression .
+
+    OR       shift, and go to state 85
+    AND      shift, and go to state 86
+    LESS     shift, and go to state 87
+    LESSEQL  shift, and go to state 88
+    IFEQL    shift, and go to state 89
+    PLUS     shift, and go to state 90
+    MINUS    shift, and go to state 91
+    TIMES    shift, and go to state 92
+    DIVIDE   shift, and go to state 93
+
+    $default  reduce using rule 63 (ParametersPrime)
+
+
+state 126
+
+   60 MethodCall: IDENTIFIER DOT IDENTIFIER OPENPAREN Parameters . CLOSEPAREN
+
+    CLOSEPAREN  shift, and go to state 131
+
+
+state 127
+
+   21 DeclarationsPrime: COMMA IDENTIFIER DeclarationsPrime .
+
+    $default  reduce using rule 21 (DeclarationsPrime)
+
+
+state 128
+
+   58 Expression: NEW IDENTIFIER OPENPAREN Parameters CLOSEPAREN .
+
+    $default  reduce using rule 58 (Expression)
+
+
+state 129
+
+   31 ifElse: IF Expression OPENBRACE Statements CLOSEBRACE ELSE . OPENBRACE Statements CLOSEBRACE
+
+    OPENBRACE  shift, and go to state 132
+
+
+state 130
+
+   32 forLoop: FOR Assignment SIMICOLON Expression SIMICOLON Assignment . OPENBRACE Statements CLOSEBRACE
+
+    OPENBRACE  shift, and go to state 133
+
+
+state 131
+
+   60 MethodCall: IDENTIFIER DOT IDENTIFIER OPENPAREN Parameters CLOSEPAREN .
+
+    $default  reduce using rule 60 (MethodCall)
+
+
+state 132
+
+   31 ifElse: IF Expression OPENBRACE Statements CLOSEBRACE ELSE OPENBRACE . Statements CLOSEBRACE
+
+    PRINT       shift, and go to state 38
+    IF          shift, and go to state 40
+    FOR         shift, and go to state 41
+    IDENTIFIER  shift, and go to state 73
+
+    $default  reduce using rule 28 (Statements)
+
+    Statements  go to state 134
+    Assignment  go to state 46
+    ifElse      go to state 47
+    forLoop     go to state 48
+    Print       go to state 49
+    MethodCall  go to state 52
+
+
+state 133
+
+   32 forLoop: FOR Assignment SIMICOLON Expression SIMICOLON Assignment OPENBRACE . Statements CLOSEBRACE
+
+    PRINT       shift, and go to state 38
+    IF          shift, and go to state 40
+    FOR         shift, and go to state 41
+    IDENTIFIER  shift, and go to state 73
+
+    $default  reduce using rule 28 (Statements)
+
+    Statements  go to state 135
+    Assignment  go to state 46
+    ifElse      go to state 47
+    forLoop     go to state 48
+    Print       go to state 49
+    MethodCall  go to state 52
+
+
+state 134
+
+   31 ifElse: IF Expression OPENBRACE Statements CLOSEBRACE ELSE OPENBRACE Statements . CLOSEBRACE
+
+    CLOSEBRACE  shift, and go to state 136
+
+
+state 135
+
+   32 forLoop: FOR Assignment SIMICOLON Expression SIMICOLON Assignment OPENBRACE Statements . CLOSEBRACE
+
+    CLOSEBRACE  shift, and go to state 137
+
+
+state 136
+
+   31 ifElse: IF Expression OPENBRACE Statements CLOSEBRACE ELSE OPENBRACE Statements CLOSEBRACE .
+
+    $default  reduce using rule 31 (ifElse)
+
+
+state 137
+
+   32 forLoop: FOR Assignment SIMICOLON Expression SIMICOLON Assignment OPENBRACE Statements CLOSEBRACE .
+
+    $default  reduce using rule 32 (forLoop)
