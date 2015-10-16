@@ -1,0 +1,9 @@
+Main {
+  main() : none {
+    bool todayWasGonnaBeTheDay
+    bool theyllThrowItBackToMe
+
+    todayWasGonnaBeTheDay = true
+    theyllThrowItBackToMe = false
+  }
+}

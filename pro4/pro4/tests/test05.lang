@@ -1,0 +1,12 @@
+HaltingProblem {
+  solve() : int {
+    return solve()
+  }
+}
+
+Main {
+  main() : none {
+    HaltingProblem h
+    h.solve()
+  }
+}
