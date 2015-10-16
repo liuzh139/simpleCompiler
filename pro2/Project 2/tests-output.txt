@@ -1,0 +1,392 @@
+./runtests.sh
+./calculator -s  < tests/test01.txt
+print number * number ; print M [ ( number ) - ( number ) - M [ number ] - number ** number ] ; print M [ number - number ] - M [ ( M [ number / number ] ) * ( number / M [ number ] ) ] ; print M [ ( number ) ** M [ number ] / ( number ) / number ** ( number ** number - number * number ) ] / ( ( M [ number ] ) / number ) + M [ M [ number ] ] ; M [ ( number * number + number / number - number + number ** number ) / ( number + number ) + number ** number / number * ( number ** number + number ) - M [ number ] - number * number - number + number / number ** ( number / number ** number / number ) ] = M [ number ] ; print number * number / number ** number + number / number ** number ** ( number ) / ( M [ number ] - ( number ) ) ** ( number / number ) - ( number - number ) ** number - number / ( number ) + number / number * number ** number ; print number ** number / number * number * number * number * number - ( M [ number + number ] ) + number + number ** M [ number ] + ( number ) ** number ** number + number - number - number / M [ number ] + number * number - number ** M [ number ] 
+
+./calculator -s  < tests/test02.txt
+print number + number ** M [ number ] + number - M [ number ] / M [ ( number ) ** number + number ] + number + ( number ** number ) + M [ number - number * number ** number ] + number ; print number - number ** number ** ( number ) / M [ number ] / number - number + ( number ) + M [ number ] / M [ ( number ** number ) + number ] ** ( number / number ) / M [ number ] - number - number * number * number + number - number ** number + number ; M [ number ] = ( number + number ) * ( number + number ) + ( number - number ) - M [ number ] / number ** number ** ( number + number - number * number + number ** number ** M [ number ] ) + M [ number / number ** number - number + number ** number + number - ( M [ number ] + number / number ) ] ; print ( number ) / M [ number + number ** number * number / number - number + number ] * M [ M [ number - number ] * number ** number * ( number ) + number / number ] ; M [ number * ( number / number ) / M [ number ] - number + number - M [ number - number ] + ( number + number ) * number + number * number / number + number + number - number * M [ number ] ] = M [ M [ ( number + number - number - number + number / number ) ] ] ; print ( M [ number ** number ] ) + ( number ** M [ number ] ) + M [ ( number * number ) ] ** M [ M [ number ] ] ** number / number - number / number / number ; M [ number + number + number ** number / number / number - number / number + number + number + number / number * ( number ) * number * number - ( number ** number * ( number ) ) / number * number / number ** number * M [ number ] - ( number ) + M [ M [ number ] ] / number - number ** ( number ) / number / number + M [ number ] * number - number ** number ] = number / number + number ** number ** number - number * number * number * number / number ** number * ( ( ( number ) ) ) * number + number * number - number - number + number + M [ number ] - ( M [ M [ number ] ] ) - M [ number + number / number + number * number / number - number / number ] 
+
+./calculator -s  < tests/test03.txt
+M [ M [ number ] + number ] = ( number / number * number / number * number ** number * number - number - number ) - ( M [ M [ number ] * ( number ) ] - number ) ; M [ M [ ( number / number ) ] - number - number * number / number ** number ** number - number / ( number ** number ) / number * number - number - number + number / number / number * number * number / ( ( ( ( number / number ) ) ) ) ] = M [ number ] * number / ( M [ number ] ** number + number ) ** ( number ) - number - number * number * number * ( number ) + number * number ; M [ M [ number + number + ( number ) ] * ( number / number + number ) ** ( number ** number ) * number - number / M [ number ] + number + number * number / number / M [ number ** number ] * number ** number ** M [ number ] * number / number * number / number - M [ number ] - M [ number ] / M [ number ] ] = M [ number ** M [ number / number ] / M [ number ] / number - number ] ** number * number - number / number - number + M [ number * number * number ] * ( number ) / number * number * M [ M [ number ] ] * ( number * number * number + number ) ; M [ number ] = M [ M [ number ] ] ** number / ( number / number + number ) - M [ number ** number ] ** number / number / number * number ; M [ number / number - ( number ) ** number / M [ number ** number - ( number ) ] / number - M [ number ] - number + number + M [ number ** number ] + M [ M [ M [ number ] * number + number ] ] * number ** ( number + number ) - number ] = number / number - number + number * number * M [ M [ number ] ] - ( number - number ) + ( number * number / number + number ** number + M [ number ] ) / M [ M [ number ** number ] ** number - number + ( number ) - M [ number ] ] ; print number ; M [ number / ( ( M [ number ] ** number ) ) ** ( number ) * ( number ) ] = M [ M [ number ] + ( number + number / number ) * number * number - number - number - ( number / number ) ] 
+
+./calculator -s  < tests/test04.txt
+M [ M [ number * number ** number + ( number ) * M [ number ] / M [ number ] ] * number ] = ( number ) ** M [ number ] - number - number - number ** number + number - ( number ) * number - number / number ; print ( ( M [ number ] ) + ( number ) / number + number ) ** number / M [ number ** number * number * number * number * M [ number ] * number * number + M [ number ] - M [ number ] ] ; print M [ ( number ) - M [ M [ number ] / number ** number ] * number / number * M [ number ] ** number - number - number ] ; M [ M [ number - number ] * number / number / number / number * number * number * number ** number * ( number - number ) + ( number * M [ number ] / number * number ) ** M [ M [ number ] ** M [ number ] ] / number ** number ** number / number + number + number ] = ( ( M [ number ] + M [ number ] ** number ) ) - ( number ) * ( number ) ** number + number - number + number - number - ( number * M [ number ] + number ** number + M [ number ] ) ; print M [ number ] ; M [ M [ number ] * number / number ** number - number + number * number - ( number ) ** M [ number ** number - M [ number ] ] + M [ ( M [ number ] - number ** number ) ] ] = number * ( number / number - number + number ) / M [ ( number ) * number / number ] * ( number + number + ( number ) ) / number * number + number * number * number ** number * number / number ** number * M [ ( number ) ] * M [ number * number ] / number * number / number - number / ( number ) / number ** number ** number / number - number * number ; print M [ ( M [ number ] ) ] * number / M [ number ** number ] / ( number * number ) / M [ number ] + number + number * number * number + number / number * number ** M [ number - number ] + M [ M [ number ] * M [ number ] - number ] 
+
+./calculator -s  < tests/test05.txt
+M [ number + number ** number - ( number ) ** M [ number - number ] * M [ ( number ) ] - M [ M [ ( number ) / number ] ] - ( number ** number * number - number * number ) / ( ( number ) ) - M [ number - number ] ** number * number + number - number + ( number ) / ( number ) ] = number ; print M [ number * number ] - number ** number - number / ( number ) + M [ number + number ] / M [ ( M [ number / number ] ) ] ; M [ number ] = number ** ( M [ M [ number ** number ] ] + ( number * number ) * ( number / number ) ) ; print number / number ; print ( M [ ( M [ number ] ) * number / number ** number / number ** ( ( number ) ) ] ) ; M [ M [ number ] * ( number ) * number + number - number / number ** number * number * number * M [ number * number ] - number ** ( number ) / ( ( number - M [ number ] * ( number + number ) ) ) ] = ( number / number / M [ number ] ) * number * number + M [ number ] * number + number + number + number + number / number - ( number ) + ( number ) / number - number ** M [ number / number - number / M [ number ] ] * M [ number - number * number / number ] * number ; print ( M [ ( number - number ) ** number - number * number * number ] + ( number + number / M [ number ] * ( M [ number ] ) ) ) 
+
+./calculator -s  < tests/test06.txt
+M [ ( ( number / number / number ) ) / M [ number ** number ] + number / number ** number / number + number ** number + number / number / number + number - number - number + M [ number ] ** number - number * number - number / number * number ** number + number - number - number / number - number * number / number - number ** number ** number * number - number / number / number ** ( number ) ] = ( number ** ( M [ number ] + number / number ) ** ( M [ number / number ] ) ) ; M [ M [ M [ number * number ] / number - number / number * number / M [ number ] ** number + number ** ( number ) * number ] ] = number / ( M [ number + number / number + number + number / number + number - number ] ) ; M [ number ** ( M [ ( number ) ] ** number ) ] = number * number / ( number ) * number / number - ( number ) * M [ ( number ) ] + number + number * number / number / number / ( number - number - number - number + M [ ( number ) ] ) + number ; M [ M [ M [ number / number ** number * number ] ] / ( number / number ) / number + number ** number ** number * number - ( number ) ** number + number ** number / number + number ] = number + number / number ** ( number ) + M [ number ] * number ** number * M [ M [ number - number ** number * number ] ] - M [ M [ ( number ) + number * number ] + M [ M [ number ] ] ] 
+
+./calculator -s  < tests/test07.txt
+print number ; M [ M [ ( M [ ( number ) ] ) ** number * number ** number + number + number * number / number - number ] / number + number - number * number + number / number - number - number / number - number - M [ number ] - number + number - number * number ] = number * number + M [ number / number + number / number - ( number / number ) - number * number + number / number / number + number ** number * number ] ; M [ number - ( ( ( number - number ) ) ) + M [ number + number - number / number ] - ( number - number * number * number ) ] = ( number - number / number / number * ( number ) * M [ number ] ** M [ ( number ) ] - number + number ** number * number / number * number / number * number * M [ ( number ) - ( number ) ] ) ; print number + number + number ** number / number - number * number / number ** ( number ) - number ** number / number * ( ( number - number ) + M [ number ] ** ( number ) ) * ( number ) - number / number / number - number ** number * number ** number + number - number * number + M [ number ] / number * number + ( number ) ; M [ M [ number ] / M [ number + number / number / number ] / M [ number ] - ( M [ M [ number ] ] ) + number ] = M [ number + number * number + number + M [ number * number ] / M [ number * number - number ] ] ** number + number - number / number ** number - number / number / ( number ) ; M [ number / M [ ( number + number ) ] - number - number ** number - ( number ) + ( number ) ** number ] = number / number - number ** number - ( ( number ) ) - number * number - number - number * number / ( number ) ** ( number ) / number + number * number * number + number ** ( M [ number ] / number - number ) / ( number * number ) * M [ number / number ] ; print number ** ( number - number ) * ( M [ number ] ) * number - M [ number ] ** number - number * number ** number ** number / number + ( number * number / number - number ** number / number ** number ) 
+
+./calculator -s  < tests/test08.txt
+M [ M [ number ] ] = number ; M [ ( number + number - number ** number ) / ( ( number ** number + number ) ) / M [ M [ number * number * number / number ] + ( number * number - number * number ) ] ] = M [ ( number ) + M [ number ** number ] ] - number + number * number ** ( number ) * number / number ** number - number ** number - number - number + M [ ( number + number ) + number ] - ( ( number ) ) + number + ( number / number ) / number + number / number ** number ; print number * number * number ** M [ number ] + number * number * number ** number + number - number / M [ number ] / M [ number ] / number / M [ number + number / number ] + ( number ) ** ( number ) ** number ** number * number / M [ number ] ** number ** number ** number * number + number * M [ number / number ] / number - number + ( number ) - ( number ) * number / number ; M [ M [ number + number / number - number ] - number - number / number ** number + number / number * number + number - number ** ( number ) - number - number + number - ( number ) - number ** number - number ** number ] = number ; print ( number * ( number ) / ( number ) ) ** ( number ) / number ** M [ M [ number ] + number - number / number * number ** number + number / ( number * number ) / number / number * number + number ] ; print number ; print ( M [ number * number ** number / number + number ] ) - number 
+
+./calculator -s  < tests/test09.txt
+M [ ( M [ number * number / number - number - number / number / number / number ] ) / M [ number ] ] = number + ( number * number ** number - number ) + number / M [ number - number - number * number + M [ number - number ] ] ** M [ number - number ** number ** number ] ** M [ number ] + number ** number - M [ number ] / M [ number ] ; print M [ number ] ** number / number * number + number + ( number - number ) / ( M [ number ] * ( number ) ) ** number ** number + number ; print number ; M [ number ** number ** ( number ) / number ** number ** number + number ** M [ number / number / number ] / M [ M [ number ] ] * M [ ( number ) ] ** M [ number / number ] + M [ M [ number ] ] * number ] = M [ number ] + number / number * ( number ) + number ** number * ( number ) * number + number * number * number - number + M [ number ] / number + number / number * number ** number ** M [ ( number ** number * number ) ] * ( number - ( ( number ) ) ) ; M [ number ** number / ( number ) / ( number ) / M [ number - number ] + number ] = ( ( number + number - ( number ) ) * number - number + number - M [ number ** number ] ) ; M [ M [ ( number ) ] + ( number ) - number - number ** number ** number * number / number + number - number + number ** number * number - number ** number + number + M [ number ] - ( number ) * number + number * M [ number ] / number + number ** M [ number ] / M [ number + number ] * number - number ** number ** number ] = number / number * number ** number - number ** number + ( number ) ** ( number ) * ( number ** number ) + M [ number - number - number * number ** M [ number + number ] / ( ( number ** number ) ) ] ; M [ M [ ( number ) - ( number ) ** ( M [ number ] ) - number ** ( number / number ) - M [ number ] + M [ number ] ] ] = ( number - number / number ) ** number ** ( number ) + number + number * number - M [ number * number ] * number ** number / M [ number ] * M [ number ] + number - number * number 
+
+./calculator -s  < tests/test10.txt
+print M [ number ] ; print number ** number + ( number ) + ( number ) ** ( number ) / number ** number ** number + number / number ** number / ( M [ ( M [ number ] * number / number ) ] ) ; print ( M [ ( number ) - number ** number ] ) / number * number * ( ( number ) ) / ( number ) - number * number * number + number ** number ** number * number * number + number / number / ( M [ number ] - number + number - M [ M [ number ] ] ) ; print ( M [ number - ( number ) ] * number ** number / number ** number * M [ number * number ] ) ** M [ number ] + number * number ** M [ number ] - number ** number - number / number - number / number - number * ( number ) + number / number ** number ; M [ M [ ( ( number ) ) ] - number * M [ M [ number ] - number + ( number + number ) ] + number + number ** number ] = number + M [ number ] - ( ( number ) ) / M [ number ** number / number + number + number * number ** number ] ; M [ ( ( number / number - number ) ) * M [ number - number - number ] * M [ M [ number ] ] + M [ ( number ) ] + ( number ) * number * number * number - number ** M [ number ] - ( number ) ] = number + M [ number - number ] * number + number * number ** number ** number ** ( number ) + ( M [ number ] ) / M [ number ** M [ number ] ] + M [ M [ number - number ] ] + number + number - number / number * number + number / ( number ) ** number ; M [ number + M [ M [ number + number ] * M [ M [ number ] ] ] / M [ number ] ** number ** number / M [ number + number ] ** number ] = number ** number / number * number + number + number - number ** number ** number + ( number ) / ( number / number ) ** number / M [ M [ number ] ] + ( number ) ** number - M [ number ] / number * number + number + number + number - number * number - number 
+
+./calculator -s  < tests/test11.txt
+M [ M [ number / number ] - number ** number + number / number ** ( number ** number ) + ( number ) + M [ number ] + M [ number ] - number + number / number ** number / number / number / number - number ] = M [ number ** ( number ** number * number + number ) ** number + number + number + number + number + number / number ** number - number / M [ number ] * number / number ] ; M [ ( number * M [ number ] ) ] = M [ ( ( number ) ) ] * ( ( number * number + number * number ) ) * ( number ) * ( number * number * number + number ) * M [ number ** number - number + number * number * number ] ; M [ M [ number - number + number - number / number ] ** ( number ) / M [ number / number + ( ( number ) ) ] ] = ( ( M [ number ] ** number - number / number ** number * number / number * ( number ) ) ) ; M [ number - number - number ** number / ( number ) - number ** number - number ** ( number ) / number * number + number - number + number - number ** number - number / ( number ) ** ( number * number + number + number + ( M [ number ] ) ) ** number ** number + M [ number ] + ( number ** number ) / number * number + number / number + ( number ) ** number ] = number ; print number ** number / number + number / number + number ** number - number - number ** number + number + number / number + M [ number ] * number ** number - number ; M [ number ] = number ; M [ number - ( number ** number + number / number ) - ( number * number * number + ( number ) ) + ( ( ( M [ number ] ) ) ) ** M [ ( number ) ] - number * number * number ** number / number / number ** number - number / number * number - number / number ] = M [ number ] 
+
+./calculator -s  < tests/test12.txt
+print ( number ) ; M [ M [ ( ( number ) / number / number - M [ ( number ) ] * M [ number - number ** number - number ] ) ] ] = M [ M [ number ] * ( number ) + number - number - number ** number ] * number + ( number / number ) * number ** ( number ) * number ; print ( number ) - ( number ) * number - number - number ** number * M [ number * number / M [ number ] ] / number * ( number ) + M [ number ] + M [ number ] - number ** number ** M [ number ] + number ; print M [ number * number ] ** M [ number ** number ] - M [ ( M [ number ] ) ] / M [ M [ ( ( number ) ) ] ] + number / number ** number - number * ( M [ number ] ) / number - number / ( number ) * M [ number ] * ( number ) + ( number ** number ) * number * number * number * ( number ) ; print number + M [ number ] * number * number / number - ( number ) * ( number ) ** M [ number / number ] * ( number ) - M [ number ] * number - number / number ** number - ( number ) * number - number - number - number ; M [ ( M [ number ] + number - number / ( number ) - number / number ** number ) * number / ( number * number + number ** number - number - number ) ] = M [ ( number ) ** ( number ) ] / ( number + number ) * number + number ** number + number ** number + number * ( number ** number ) - ( M [ number ] * number + number ) ** number - number + number / M [ number ] ** number ** number / number ** number / number ** number ** M [ number ] ** ( M [ number ] ) - number - number ** number * M [ number ] * number + number / number * number / number ; print number * ( number ) ** M [ number * number * number ** number ] * ( M [ number ] ) + number * number / number * number ** number ** M [ number * number - number - number / number ] 
+
+./calculator -s  < tests/test13.txt
+M [ number - number * ( number / number ) * number * number / M [ number ] / number - M [ number ] - number ] = ( number ) / M [ number / number ] - ( ( number ) ) - number - ( M [ number / number ] ) - number - ( number ) * number - number / number / number + number - number ** number - number / number - M [ number + number ] / M [ number - number ** number * number ] / number ; print ( ( number ) - number - number * M [ number ] * number - number / number + number / number - number - number * number * M [ number / number + number + ( number ) ] ) ; print M [ ( number ) * ( number ) ** number ** number + number + number - number - number - number * number * number - number ] ** number - number - number ** number ** number + number + number * number + number + M [ number / number ] / number ; M [ number / number - number ** number - number / M [ number ] + number * number ** number - number * number * number + number - number / number * number - number * number + number / number ** M [ number ] / number + number / number - M [ number ] ] = M [ number ] / number ** number ** M [ M [ number ] ] * number ** number * number + number / M [ number ] / number - number * M [ number ] + number - number / number - number ** number / number ** number ** number * number / M [ number ] * M [ number ] ** number / number * ( number ** number + number / number ) ** ( ( number ) ) * M [ number ] + number * number - number ** number ** number * number - M [ number ] / number * number ; M [ number - ( number ) ] = number / ( M [ number + number + number - number ** number + number - number + number ] ) ; M [ number ] = ( ( number ) + number - number / number / number * ( M [ number ] ) + number ) ; print M [ M [ number / number ] * number * ( number ) + number + number / ( number / number ) * number - number + number + number * number + number * number - number + number - number ** ( number + number ) ] 
+
+./calculator -s  < tests/test14.txt
+print number ; print number + ( ( number - number ) - M [ number ] * ( number ) ) / ( number ) / number / number ** number ** M [ number ] + M [ number - number / number + number ] ; M [ M [ number ] / number * M [ number ] * M [ number / number ] - M [ number - number ] + ( number ** number - number + number ) / M [ number - number + number * number ] ] = M [ M [ number - M [ number + number ] - number / number ** number + number + number / number * M [ number ] ] ] ; M [ ( number ** number ** number - M [ number - number ] ) - ( number + number ) ** number / number * number + number / number / number * number ** M [ number ] + number - number + ( number + number * number * number * number ) ] = number ; M [ number - ( number + number ** number + number * number - number ) ] = ( ( number - number ** number * number ) ** M [ ( number ) ] ** number / number / number * number / number - number * number / number - number * number * number + number + number - number ** number * number - number - number / number + number ) ; print ( number ) * ( number ) + number ; M [ number / number - ( number ) ** number + number + M [ number ] / M [ M [ number ] ] / ( number ) * M [ number ** number ** number - number ] + ( number ) - ( number ) / number / M [ ( number ) / number + number ] / number / number + number - number - M [ number ] / ( ( number ) ) + ( number * number ) ** M [ number ** number / number ] ] = ( M [ number ] - ( number ) ) ** number + number * number + number / number - number - number ** number - M [ number ] - number * number + number ** number / number ** number ** number ** number + number ** number - number - number - number / number + number - number ** ( number ) ** ( number ) - number ** number + ( number ) * number - number - number - number - number - M [ number - number ] 
+
+./calculator -s  < tests/test15.txt
+print number - number / number - number ** ( number / number ) * M [ number * number ] * number + number / number - number + ( M [ number ] / number + number ** ( number ) + number / number ) ** number * number ; print number - number ** number ** ( number ) - number * number * number - number / number ** number / number * number * number + M [ number ] * ( ( number ) * number / number ** number ** number ** number ** number ) + number ** number / number / number * number - number + number - number ** M [ number ** number * number / number ] ; print ( number - ( ( ( number ) ) ) - ( number ) - number * number - number ** number * number / number ) ; print M [ number ] / number - number * number * number * number - number * number / ( number ) + number - number + number + number - number * M [ number * number ** ( number ) + number * number / number * number ] / number * number / number ** number + number + number - number * number * number - number - number - number / number ** number * number + number ; print number + M [ number * number ] + number + number * number / number / M [ number / number ] + number * number ** number - M [ ( M [ number / number * number * number ] ) ] ; print ( ( M [ ( number * number ) ] + number ** number ** number * ( number ) ) ) ; M [ number ** ( number ) + M [ number * number / number ** number ] ] = number 
+
+./calculator -s  < tests/test16.txt
+M [ ( M [ number + number ] ** number / M [ number / number ] ** M [ number ] + number + number ) * M [ M [ number ] ] ] = M [ number ] - number / number ; M [ M [ ( number ) - number ] * ( number ** number ) ** number - number + M [ number ] / M [ number ] / number + ( number ) ** number + number / number - number + M [ number ] ** number + number - ( number * number ) - M [ number + number / number ] ] = number ** ( ( number ) - number / number ) ** ( number / number + number + number / number + M [ number ] ) - ( number ) ; print number - number * number + number + number / number + number ** number * number - number * number + number + M [ number ] ** M [ number ] + M [ ( number + number ) * number * number * M [ number ] ] * number ; M [ number ] = number - ( number ) * M [ M [ number ] - ( number ) ] ** number ** M [ ( number ) ] - number - number + number ** number * number * number / number + number ; print number ** number + number * number - number / number / number / number / M [ number + number ] - M [ number / number ** number ** number ] + number - number / number ** M [ ( number ) ] + M [ ( number + number ) ] ** number + number / number - number ** ( number / number ) * M [ number / number ] + M [ number ] ; M [ M [ M [ ( number ) * ( number ) * number + number / number ** number ] ] - ( number ** number - ( number ) - ( number - number ) ) ** number ** M [ number * number ] ** ( M [ number ] ) ** number * number + number ] = number ** number / number * ( number ) ** number ** ( number + M [ number ] ) ; print ( ( number ) ) ** M [ ( number ) / number ** ( number ) ] * ( number ) - number ** number - ( number ) ** number / number - number / number ** number - number ** number ** number - number 
+
+./calculator -s  < tests/test17.txt
+print number / number ** ( number - number / number ** number ) ** ( ( number ) ) * ( number ** number ) + number ; print M [ M [ ( ( number ) ) / number - number / number / number - number ] ] ; print number ; M [ M [ number * number - number ** number ] + M [ number ] + number ** number ** M [ number ] * number / number - ( number ) * number ** number - number * number * M [ number * number ] ** number ] = ( ( M [ number ] ) ) ; print M [ number - number ] / number / M [ number ] * M [ M [ number * number ] ] - number ** number - number ; M [ M [ ( number * number / number / number + ( number ** number ) ) ** number ] ] = number * M [ number ] ; M [ number ] = number 
+
+./calculator -s  < tests/test18.txt
+print ( ( number ** number / number / number / number ) ** ( number ** number ) + number ** number ** number * number ** number * M [ number ** number ] ) ; M [ ( number * M [ number ] ** number + number ) * M [ number ** number - number ] / number - number * number / number - M [ number ** number ** number / M [ number ] ] * number + number - number + number + ( number / number + number + number ) ] = number / ( number / number ) ** number ** M [ ( number * number - number + number * number ) ] ; print number ; print ( M [ M [ number - number ** number - number - number ** number - number + number ] ] ) 
+
+./calculator -s  < tests/test19.txt
+M [ ( number - number + M [ number ] / number / number + ( number ) / M [ number ** number / ( number ) ] ) / M [ number ** ( number * number ) * ( ( number ) ) ] ] = M [ number / number - number ** number ] - number / number ** number / number + number ** number * number / number - number - number / number ** number / number + M [ number - number / number ] * ( number + number * number / number / ( number - number ) ) - ( M [ number - number * number ] ) ; M [ M [ ( ( number - number ) ) ] / number ** number ** ( number ) / ( ( number ) ) + number - number ] = M [ number * number + number - number * M [ number ] + number * number / number * M [ number * number ] ** M [ number + number + number ] * number * number / number + number / number + number / M [ number ] ] ; print ( M [ number ] ** number ** number / number / number ** number / number ) ** number ** number / number * number * number + number / number + number * number + number + number + ( number ) - M [ ( number ) ] + number * number / number + number + number / number ; M [ number ] = ( M [ ( M [ number ] ) * number - number * number / M [ number ] ** number ] ) ; M [ ( number ) + number - ( M [ number ] ) + M [ number ] ** number / number / number + number ** number - number + number * number + number - number / number - number + number / M [ ( number ) ] - number + ( number / number ) / ( ( number / number ) ) ] = M [ number * ( number ** number * number * number ) ] + ( number ) ; print number ; print ( M [ number ] ** number / number - M [ M [ number ] ] * M [ number ] + M [ number - number ] * number ) 
+
+./calculator -s  < tests/test20.txt
+print M [ number ] - ( number ) + ( number / number ** M [ number ] ** M [ number / number ] / ( number / number ) * ( number * number ) ) ; print M [ number + number + M [ number ] ** ( number ) / number ** number ] ** number ** number / number * number - number - number + number * number / number / number / number - M [ number ] * ( number ) ; M [ ( ( number + number ) * number - number / number / number - number ) - number * number * number / number ** ( M [ number * number ] ) * M [ ( number / number * M [ number ] ) ] ] = number ; M [ ( M [ number ** number ** number ** number ] ) / M [ M [ M [ number ] ] - ( number / number ) ] - ( number / number ) * ( number ) - number ** number * M [ ( number - number ) ] - number - number / M [ number ] + ( number ) + number * number + number + number ** number + number * ( number * number ) ] = number + ( number / number * number ** number + M [ number ] ** number * number ) * ( M [ ( ( number ) ) ] ) * ( ( number ) / number ** number + number ** number ** number * number ) ; M [ number ] = M [ ( number ) / number + number ** number / number + M [ number ] * number + number - number * ( number ) ** number + number / number + number - M [ number ] ** number * number * number ] ; print M [ number ** number ** number - ( number / M [ number ] ) ] ; M [ number ] = M [ number / number - number * number * number - ( number ) ** number * number + ( number ) ** number ** number * number ] 
+
+./calculator -s  < tests/test21.txt
+print M [ ( M [ number ] ) / number - ( number - number ) ] ** ( number - number - number + number ** number ) - number ; M [ number - number - number ** ( M [ number ] ) * ( number + number ) - number / M [ number ] / number + M [ number ] * number ** number * M [ number - number ] - ( number ) / ( number ) * M [ number ] ** number - number / number - number ** M [ number * number ] - number - M [ M [ number ] - number / number ] + ( number ) * number - number * number ] = number - ( M [ number ** number ** number * number ] ) ; M [ number + number + number / M [ number ] + number - number - number - ( number + number * number + number ) + ( number ** number ) - number + number / ( number * number + number / number + number - number + number ) ] = M [ number * ( number ** number - ( number ) ) - number + number + number + number + ( M [ number ] ) ] ; print number ; M [ number ] = M [ number ** number / M [ number ] ] - ( number ** number + M [ number ] + M [ number ] * number ** number ) * ( ( M [ number / number ] ) ) ; M [ ( number ) / number - number * M [ number ] + number * number * number ** number ** number * ( number ) / number - number ** number ** M [ M [ number ] ] * number / number - number + ( number + number ) ** ( number ) ] = ( number + number - number ) + M [ number - number ] / M [ ( number ) ] + number + number / ( number ) / number * ( number / number / M [ number ] ) * ( ( number ) ** ( M [ number ] ** M [ number ] ) ) ; print number 
+
+./calculator -s  < tests/test22.txt
+print M [ M [ number - number * number / number - M [ number - number ] ] * M [ number ** number * number ** number ] + number ** number * number * number / ( number - number ) ] ; M [ number ] = M [ number ] * ( number / number - number - number ) * ( number / number - number ** number ) + M [ number - number ] / ( number - number ) * ( M [ number - number ] ) ; M [ number ] = ( number * number * ( number ) ) ** number - number * number / number + number * number ** number / number / ( number * number ** number - number ) * ( number * number ** number - number ) + ( number - number ) ** M [ number - number ] ** ( number + number ) / number - number * number ** number / ( number ) ; print M [ M [ ( number - M [ number ] ) ] ] - ( M [ number ] ** ( number ** number * number + number ) ) ; print number ; M [ M [ number + number ] + number ** ( number ) ** ( number - number / number + number ) - number * number + M [ number ] ** number * M [ number ] / number - number + number * number ** number + number ] = ( number / ( number ) - number / number / number / ( number ) / number / number / number * number ) ; print number + number ** M [ ( number ) ] / ( number ) / number - number - number + number ** number 
+
+./calculator -s  < tests/test23.txt
+M [ ( number * number ** number - number + number * number + ( M [ number ] ) - number ) ** number - number + number ** M [ number * number / number / number ] * number ] = number / number / M [ number / number ** number ** number / number * number ** number + number * ( number + number ) * number + number ** M [ number ] ] ; print number - ( number * number ) * ( number ) * ( number * number ) - number - number * number * number ** M [ M [ number ] * M [ number ] / number + number ** number ** number ] ; M [ number ] = M [ number - number + number ** number / number - number + number / number ] ** M [ number ** ( number * number ) ] * number ** number + number + ( number ) / ( ( number ) ) + ( M [ number ] ) * number * number - number ** ( number ) + M [ number ] ; M [ ( number * M [ number ] ** M [ number ] + M [ number ** number ] - number ** number * number * number + ( M [ number * number ] ** ( number ) + number * number ) ) ] = ( ( M [ number ** number ] / ( number + number ) ) ) * number ; M [ M [ number + ( number ) - M [ number + number ] / number / number / number * number ** number * number ** number - number ] - M [ ( number * number + number ** M [ number ] ) ] ] = M [ number ** number + number ** number + number ** number - number ** number + number - M [ number ] * M [ number ] / number / number ** number * number - ( number ** number ) + number ] ; M [ M [ number / number ] + number - number ** number ** number * number - number ** number / number * M [ number ] * number / number ] = ( M [ number ] + ( number ) ) - number / number / number - number + M [ number ] * number + number * number - M [ number ** number * number / number ] - M [ number + number / number + number - ( number ) ** number / number * ( number * number / number * number ) ] ; M [ ( ( number ) / number * number ) / ( number * number ) ** number / number ** number - ( number / M [ number ] / number / number ) + number + number + ( number ) ** M [ number ] - number + number / M [ number * number ] ** ( number + number + M [ number ] ** number - number * number / number ) ] = number ** ( number ) * number ** number + number * number - number * M [ number ] ** number / number * M [ number * number ] - ( number * number ) * ( number ) ** M [ number ] + number 
+
+./calculator -s  < tests/test24.txt
+M [ ( M [ M [ number - number ] ] + ( number ) - number / number - number + number - number / number * ( ( M [ number ] ) ) ) ] = M [ M [ number ] ] ; M [ number ** number ] = ( number ** number ) ** number * number / ( number ) / number / number - number ** number * M [ number - number ] + ( ( ( number ) ) / number * number / number ) / M [ M [ number ] ] ** ( number / number ) / ( M [ number ] * number ) - M [ number ] ; M [ ( number ) * number - number * M [ number ** number ] + number * M [ number ] / number ] = number ; print ( ( number + number ) ) ** number + number * number / M [ number ** number ] * ( M [ number ] * number + number ) * M [ number ] - ( number ) * M [ number * number ] + number ** number * number ** ( M [ number ] ) ** M [ M [ M [ number + number ] ] ] ; M [ ( ( M [ number + number ] ) / number ** number ** number / number + number * number * number - ( number - number ) + ( ( number ) ) + number / number + number ** number ) ] = ( ( number + number ) - number * number * ( number ) / M [ ( number ) ] - ( number / number ) ** ( number ) ** number ** number / number * M [ M [ number ] / number - number ] ) ; print number ; M [ M [ M [ ( number - number - number * number ) ] - M [ M [ ( number + number ) ] ] ] ] = number 
+
+./calculator -s  < tests/test25.txt
+M [ ( number * number + number + number ) * number - number - number * number + number - number ** ( number ) - ( number * number - number / number + number ** number / number + number ) / ( M [ M [ number ] ] ) ** number / number ** number / number / ( number + number ) ** number * ( number ** number ) + M [ M [ number ] - M [ number ] ] ] = M [ M [ M [ number ** number / number ] ] ] / M [ number + number - number + number + number ] / number / M [ number ** number ] / number ; M [ M [ number - number / M [ number ] ] - M [ number - number - ( number ) ] / M [ M [ number ] / number * number - ( number + number ) ] * number ] = number * number / number ** M [ number ] ** number / number + number - ( number ) - number + number / M [ number ] * number / number ; M [ M [ number / number ] + number - M [ number ** number / number / number ] ** ( number ) ** M [ number ] ** ( M [ number ] ) / M [ number ** number ] - number * number - number - M [ number ] ] = ( ( M [ number + number / number - number ] ) ) + ( M [ ( number * number ) ] ) / ( M [ number / number ] ) ** number / ( number ) ** number ; print number / number + number - number + number * number - M [ number ** number ] / number * ( ( number ) ) * M [ ( number + number ) ] / ( number ) ; print ( number - number * M [ number ] ) / number - number / number - number - number ** ( number ) / number - number / M [ number ] ** number + number ; M [ number + number ** number / ( number ) ** number * number * M [ number ] + number * number * number + number + number * number ** M [ number ] - number / ( number - number + number ) + number - number - number - number / number * number * number + number ] = M [ number / number * number ] * number ** number ** number / number * ( ( ( number ) ) ) / number ** number - number ** number * number + number + ( number - number * number / number ) / M [ number + number ] + M [ number - number ] ; print M [ number - number * number ] * number ** ( number + number ) / M [ number - number ] - ( number / number * number - number ) ** ( ( M [ number ] + number ) - ( number ) ) 
+
+./calculator -s  < tests/badtest01.txt
+M [ ( M [ number - number ] ) ) ] = M [ number ] ; M [ ( number + number ) * number / number - number + number ] = ( number ** number - number * number ) ; M [ number / number - number * number ** number - number ] = ( number ) ; print number ** number ** number * number + number * number * ( number ) 
+
+./calculator -s  < tests/badtest03.txt
+M [ M [ number / number ] - number ** number + number ] = number ** number / number - number + number * number ** number ; M [ number / number * number * M [ number ] ** number - number ] = number + number ** M [ number ] / number print M [ number ** number ** number / number ] ; M [ number ** number - number * ( number ) ] = ( number ** number ) * number * number - number 
+
+./calculator -s  < tests/badtest04.txt
+print number ** number / / ( number ) + ( M [ number ] ) ; print ( number Scan error: found invalid character # at line 2
+
+./calculator -s  < tests/badtest05.txt
+print number + number - ( number ) ** M [ number ** * number ] ; M [ M [ number ] - number ** number ] = number + number ** number ** number - ( M [ number ] ) ; print number - number / number ** number - M [ ( number ) ] ; M [ M [ M [ number ] ] + M [ number ] ** M [ number ] ] = number + number * number - number / number 
+
+./calculator -s  < tests/badtest06.txt
+Scan error: found invalid character n at line 1
+
+./calculator -s  < tests/badtest07.txt
+M [ number ** M [ number ] + M [ number ] ] = number - number * number / number * number - number ; M M [ number ** number + ( number ) / number - number + M [ number ] ] = number - M [ number ** number ] ; print M [ number ] - number ; print number ** ( number ) + number + number ** number ** number 
+
+./calculator -s  < tests/badtest08.txt
+Scan error: found invalid character   at line 1
+
+./calculator -s  < tests/badtest13.txt
+print number / number * number + number * number * number * number ** number = number ; M [ number + ( number + number ) ] = number / number * number - number - ( number + number ) ; print M [ number ** number + number * number ] ; Scan error: found invalid character # at line 4
+
+./calculator -s  < tests/badtest15.txt
+M [ number - ( number ) ] = number ; M [ number ** number * number * number + number number ] = number + number / number * number - number ; print M [ number + number ] / number ; M [ ( number * number ) ** number - number - number ** number ] = ( number ) - ( number ) / M [ number ] 
+
+./calculator < tests/test01.txt
+
+./calculator < tests/test02.txt
+
+./calculator < tests/test03.txt
+
+./calculator < tests/test04.txt
+
+./calculator < tests/test05.txt
+
+./calculator < tests/test06.txt
+
+./calculator < tests/test07.txt
+
+./calculator < tests/test08.txt
+
+./calculator < tests/test09.txt
+
+./calculator < tests/test10.txt
+
+./calculator < tests/test11.txt
+
+./calculator < tests/test12.txt
+
+./calculator < tests/test13.txt
+
+./calculator < tests/test14.txt
+
+./calculator < tests/test15.txt
+
+./calculator < tests/test16.txt
+
+./calculator < tests/test17.txt
+
+./calculator < tests/test18.txt
+
+./calculator < tests/test19.txt
+
+./calculator < tests/test20.txt
+
+./calculator < tests/test21.txt
+
+./calculator < tests/test22.txt
+
+./calculator < tests/test23.txt
+
+./calculator < tests/test24.txt
+
+./calculator < tests/test25.txt
+
+./calculator < tests/badtest01.txt
+Parse error: expected ] found ) at line 1
+
+./calculator < tests/badtest03.txt
+Parse error: found invalid token print at line 3
+
+./calculator < tests/badtest04.txt
+Parse error: found invalid token / at line 1
+
+./calculator < tests/badtest05.txt
+Parse error: found invalid token * at line 1
+
+./calculator < tests/badtest06.txt
+Scan error: found invalid character n at line 1
+
+./calculator < tests/badtest07.txt
+Parse error: expected [ found M at line 2
+
+./calculator < tests/badtest08.txt
+Scan error: found invalid character   at line 1
+
+./calculator < tests/badtest13.txt
+Parse error: found invalid token = at line 1
+
+./calculator < tests/badtest15.txt
+Parse error: found invalid token number at line 2
+
+./calculator -e < tests/evaluation/goodtest01.txt
+1369
+11230
+0
+
+./calculator -e < tests/evaluation/goodtest02.txt
+71284
+205719
+
+./calculator -e < tests/evaluation/goodtest03.txt
+-37
+7496
+0
+94
+
+./calculator -e < tests/evaluation/goodtest04.txt
+38
+0
+0
+5
+5
+
+./calculator -e < tests/evaluation/goodtest05.txt
+3
+1316
+-35627
+33
+
+./calculator -e < tests/evaluation/goodtest06.txt
+2
+-7
+95
+87
+
+./calculator -e < tests/evaluation/goodtest07.txt
+-55701
+-677
+8
+0
+
+./calculator -e < tests/evaluation/goodtest08.txt
+124
+-1281
+34
+5
+20
+
+./calculator -e < tests/evaluation/goodtest09.txt
+86
+204800
+134
+74
+
+./calculator -e < tests/evaluation/goodtest10.txt
+0
+1849
+-24683592
+5
+
+./calculator -e < tests/evaluation/goodtest11.txt
+5
+96
+74
+7666
+
+./calculator -e < tests/evaluation/goodtest12.txt
+0
+84
+5
+143942
+1791
+
+./calculator -e < tests/evaluation/goodtest13.txt
+184636320
+3
+5
+44
+
+./calculator -e < tests/evaluation/goodtest14.txt
+1
+17632
+0
+99
+
+./calculator -e < tests/evaluation/goodtest15.txt
+5098
+2300
+68
+
+./calculator -e < tests/evaluation/goodtest16.txt
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+
+./calculator -e < tests/evaluation/badtest02.txt
+36
+Parse error: found invalid token ; at line 2
+
+./calculator -e < tests/evaluation/badtest09.txt
+0
+Semantic error: division by zero at line 3
+
+./calculator -e < tests/evaluation/badtest10.txt
+Semantic error: division by zero at line 1
+
+./calculator -e < tests/evaluation/badtest11.txt
+0
+Semantic error: index 65536 out of bounds at line 3
+
+./calculator -e < tests/evaluation/badtest12.txt
+Semantic error: division by zero at line 2
+
+./calculator -e < tests/evaluation/badtest14.txt
+Semantic error: index -2147482460 out of bounds at line 4
+
